@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PDF导入 · 本地识别</title>
+  <link rel="stylesheet" href="/vendor/math.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/vendor/katex.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header><div><h1>PDF导入</h1><span class="local">本地识别 · 独立试用</span></div><nav><a href="/bank">题库</a><button type="button" id="new-import">新导入</button><button type="button" id="shutdown-server" hidden>关闭导入</button></nav></header>
+    <main>
+      <div id="notice" role="status" aria-live="polite"></div>
+      <div id="error" role="alert" hidden></div>
+      <div id="screen"></div>
+      <section class="history"><div class="section-head"><h2>导入记录</h2><button type="button" id="refresh-history">刷新</button></div><div id="history-list"></div></section>
+    </main>
+    <footer>文件与识别结果保存在本机；只写入独立试用库。识别完成后仍需核对题干、公式及答案。</footer>
+  </div>
+</body>
+</html>

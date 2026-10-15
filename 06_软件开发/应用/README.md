@@ -13,3 +13,5 @@ React、TypeScript、FastAPI、SQLite、KaTeX 和 Playwright 的开发依赖保�
 `scripts/prepare_analysis.py` 从上游统一题库及报告生成分析快照。当前真题统计快照为 2014—2026 年的 293 道题；资料补录进入最终版数据库，不会自动更新这份快照。`scripts/import_source_images.py` 生成题图资源，仍使用保留的原页与880预览目录。
 
 清理详情见上一级 `清理记录.json`，当前版本与保留目录说明见 `当前版本说明.md`。待补录项目以 `资料补录待办.json` 所列最终版当前记录为准。
+
+2026-10-15：新增独立本地PDF识别试用入口“启动本地PDF导入.cmd”。使用单独的识别环境、模型和试用库，可识别扫描页、核对及编辑、保存草稿和导出JSON；未接入上述正式软件。详见[使用说明](pdf_import/README.md)。
