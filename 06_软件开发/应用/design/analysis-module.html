@@ -31,15 +31,16 @@
 #math2-analysis-two-parts main{padding:23px 26px 27px}
 #math2-analysis-two-parts .topic-shell{display:grid;grid-template-columns:178px minmax(0,1fr);gap:25px}
 #math2-analysis-two-parts .topic-navigation{min-width:0;padding-right:18px;border-right:1px solid var(--r-line)}
-#math2-analysis-two-parts .navigation-heading{font-size:14px;color:var(--r-muted);margin-bottom:9px;letter-spacing:.3px}
-#math2-analysis-two-parts .topic-button{display:block;width:100%;border-radius:6px;padding:10px 11px;margin-bottom:6px;font-size:14px}
-#math2-analysis-two-parts .topic-button small{display:block;color:var(--r-muted);font-size:14px;margin-top:3px}
-#math2-analysis-two-parts .topic-button[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand)}
-#math2-analysis-two-parts .catalogue{margin-top:18px;border-top:1px solid var(--r-line);padding-top:13px}
+#math2-analysis-two-parts .navigation-heading{font-size:16px;color:var(--r-text);margin:0 0 5px;font-weight:500}
+#math2-analysis-two-parts .catalogue-count{font-size:14px;color:var(--r-muted);margin:0 0 12px}
+#math2-analysis-two-parts .catalogue{border-top:1px solid var(--r-line);padding-top:5px}
 #math2-analysis-two-parts summary{cursor:default;color:var(--r-muted);font-size:14px}
-#math2-analysis-two-parts .catalogue details{margin:10px 0}
-#math2-analysis-two-parts .catalogue button{padding:7px 4px;font-size:14px;display:block;width:100%;overflow-wrap:anywhere}
-#math2-analysis-two-parts .catalogue button[aria-pressed=true]{color:var(--r-brand);font-weight:500}
+#math2-analysis-two-parts .catalogue details{margin:0;border-bottom:1px solid var(--r-line)}
+#math2-analysis-two-parts .catalogue summary{padding:12px 0;font-size:14px;overflow-wrap:anywhere}
+#math2-analysis-two-parts .catalogue summary>span{color:var(--r-muted);margin-left:8px;white-space:nowrap}
+#math2-analysis-two-parts .catalogue-quantity{color:var(--r-muted);white-space:nowrap}
+#math2-analysis-two-parts .catalogue button{padding:10px 8px;font-size:14px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;width:100%;overflow-wrap:anywhere;border-radius:5px;text-align:left}
+#math2-analysis-two-parts .catalogue button[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand);font-weight:500}
 #math2-analysis-two-parts .breadcrumb{font-size:14px;color:var(--r-muted);margin-bottom:5px}
 #math2-analysis-two-parts .topic-meta{color:var(--r-muted);font-size:14px;margin:7px 0 15px;font-variant-numeric:tabular-nums}
 #math2-analysis-two-parts .research-focus{border-left:3px solid var(--r-brand);padding:2px 0 2px 14px;margin-bottom:15px}
@@ -119,7 +120,7 @@
 #math2-analysis-two-parts .standard-columns dt{color:var(--r-brand)}
 #math2-analysis-two-parts .standard-columns dd{margin:0}
 #math2-analysis-two-parts .muted{color:var(--r-muted);font-size:14px}
-@media(max-width:780px){#math2-analysis-two-parts .topic-shell{grid-template-columns:1fr;gap:18px}#math2-analysis-two-parts .topic-navigation{border-right:0;padding-right:0;border-bottom:1px solid var(--r-line);padding-bottom:13px}#math2-analysis-two-parts .topic-pins{display:grid;grid-template-columns:1fr 1fr;gap:5px}#math2-analysis-two-parts .topic-button{margin:0}#math2-analysis-two-parts .catalogue{margin-top:10px;padding-top:8px}#math2-analysis-two-parts .catalogue>summary{font-size:14px}#math2-analysis-two-parts[data-reader-layout=parallel] .reader-layout{grid-template-columns:1fr}#math2-analysis-two-parts[data-reader-layout=parallel] .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}}
+@media(max-width:780px){#math2-analysis-two-parts .topic-shell{grid-template-columns:1fr;gap:18px}#math2-analysis-two-parts .topic-navigation{border-right:0;padding-right:0;border-bottom:1px solid var(--r-line);padding-bottom:13px}#math2-analysis-two-parts .catalogue{padding-top:8px}#math2-analysis-two-parts[data-reader-layout=parallel] .reader-layout{grid-template-columns:1fr}#math2-analysis-two-parts[data-reader-layout=parallel] .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}}
 @media(max-width:580px){#math2-analysis-two-parts{font-size:14px}#math2-analysis-two-parts .research-header{padding-left:16px}#math2-analysis-two-parts .research-intro{padding:20px 16px 16px;align-items:start}#math2-analysis-two-parts h1{font-size:23px}#math2-analysis-two-parts h2{font-size:21px}#math2-analysis-two-parts .source-summary{font-size:14px;white-space:normal;min-width:80px}#math2-analysis-two-parts .research-toolbar{padding:0 16px 14px}#math2-analysis-two-parts .research-tabs button{padding:8px 10px;font-size:14px}#math2-analysis-two-parts main{padding:18px 16px}#math2-analysis-two-parts .question-reader{padding:15px}#math2-analysis-two-parts .comparison-grid,#math2-analysis-two-parts .comparison-picker,#math2-analysis-two-parts .standard-columns{grid-template-columns:1fr}#math2-analysis-two-parts .paper-row{grid-template-columns:26px minmax(0,1fr);gap:8px}#math2-analysis-two-parts .paper-row-meta{grid-column:2}#math2-analysis-two-parts th,#math2-analysis-two-parts td{padding:8px 7px;font-size:14px}#math2-analysis-two-parts .research-footer{padding:12px 16px}#math2-analysis-two-parts #standards-panel{padding:18px 16px}#math2-analysis-two-parts .question-stem{font-size:14px}}
 @media(pointer:coarse){#math2-analysis-two-parts button,#math2-analysis-two-parts select{min-height:44px}#math2-analysis-two-parts select{font-size:16px}}
 @media(max-width:580px){#math2-analysis-two-parts .research-toolbar{padding:16px 16px 14px}}
@@ -299,8 +300,8 @@
   }
   function groups(){const map=new Map();for(const q of scoped()){if(!map.has(q.model))map.set(q.model,[]);map.get(q.model).push(q);}return map;}
   function navigation(){
-    const map=groups(),pins=Object.keys(topicNames).filter(name=>map.has(name));
-    return `<aside class="topic-navigation" aria-label="考法目录"><p class="navigation-heading">考法专题</p><div class="topic-pins">${pins.map(name=>{const qs=map.get(name);return `<button type="button" class="topic-button cursor-interaction" data-topic="${esc(name)}" aria-pressed="${state.topic===name}">${esc(topicNames[name])}<small>${qs.length}道真题</small></button>`;}).join('')}</div><details class="catalogue"><summary>全部考法 · ${map.size}类</summary>${chapterOrder.map(ch=>{const models=[...map].filter(([,qs])=>qs[0].chapter===ch).sort((a,b)=>b[1].length-a[1].length);return models.length?`<details><summary>${esc(ch)}</summary>${models.map(([name,qs])=>`<button type="button" class="cursor-interaction" data-topic="${esc(name)}" aria-pressed="${state.topic===name}">${esc(name)} · ${qs.length}题</button>`).join('')}</details>`:'';}).join('')}</details></aside>`;
+    const map=groups(),selectedChapter=map.get(state.topic)?.[0]?.chapter,expanded=new Set([...root.querySelectorAll('.catalogue details[open]')].map(el=>el.dataset.catalogueChapter));
+    return `<aside class="topic-navigation" aria-label="考法目录"><h3 class="navigation-heading">全部考法</h3><p class="catalogue-count">${map.size}类 · ${scoped().length}道真题</p><div class="catalogue">${chapterOrder.map(ch=>{const models=[...map].filter(([,qs])=>qs[0].chapter===ch).sort((a,b)=>b[1].length-a[1].length);return models.length?`<details data-catalogue-chapter="${esc(ch)}" ${ch===selectedChapter||expanded.has(ch)?'open':''}><summary>${esc(ch)}<span>${models.reduce((n,[,qs])=>n+qs.length,0)}题</span></summary>${models.map(([name,qs])=>`<button type="button" class="cursor-interaction" data-topic="${esc(name)}" aria-pressed="${state.topic===name}"><span>${esc(name)}</span><span class="catalogue-quantity">${qs.length}题</span></button>`).join('')}</details>`:'';}).join('')}</div></aside>`;
   }
   function renderTopic(){
     let rows=topicRows();if(!rows.length){const first=scoped()[0];if(first){state.topic=first.model;rows=topicRows();}}if(!rows.length)return '<p class="empty-state">没有对应真题。</p>';
