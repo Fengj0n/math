@@ -131,7 +131,6 @@ export function mountAnalysis(host,rows,options){
   function render(){
     if(disposed)return;
     const openSource=root.querySelector('.rating-source')?.open,previousQuestion=main.dataset.readerQuestion;
-    const catalogueScroll=root.querySelector('.topic-navigation')?.scrollTop||0,readerScroll=root.querySelector('.topic-workspace')?.scrollTop||0;
     root.setAttribute('data-reader-layout',state.readerLayout);root.querySelector('#research-period').value=state.period;
     root.querySelector('#analysis-current-heading').textContent=state.view==='difficulty'?'难度评估':'试卷分析';
     main.innerHTML=state.view==='difficulty'?renderDifficulty():renderStudy();
@@ -140,9 +139,6 @@ export function mountAnalysis(host,rows,options){
     const basket=root.querySelector('#analysis-selection');basket.hidden=!selection.length;basket.textContent=`查看已选题 · ${selection.length}`;
     const view=state.view==='difficulty'?'难度评估':'试卷分析';if(view!==lastView){lastView=view;options.onView(view);}
     typeset();
-    const catalogue=root.querySelector('.topic-navigation'),reader=root.querySelector('.topic-workspace');
-    if(catalogue){catalogue.tabIndex=0;catalogue.scrollTop=catalogueScroll;}
-    if(reader){reader.tabIndex=0;reader.setAttribute('aria-label','考法与对应真题');reader.scrollTop=currentQuestion===previousQuestion?readerScroll:0;}
 
   }
   const click=event=>{
@@ -155,8 +151,8 @@ export function mountAnalysis(host,rows,options){
     const button=event.target.closest('button');if(!button||!root.contains(button)||button.disabled)return;
     if(button.dataset.view){state.view=button.dataset.view;render();save();return;}
     if(button.dataset.studyMode){state.studyMode=button.dataset.studyMode;render();save();return;}
-    if(button.dataset.topic){state.topic=button.dataset.topic;state.question='';state.view='study';state.studyMode='topic';render();if(window.matchMedia('(max-width:780px)').matches)root.querySelector('.topic-workspace')?.scrollIntoView({block:'start'});save();return;}
-    if(button.dataset.question){state.question=button.dataset.question;render();save();return;}
+    if(button.dataset.topic){state.topic=button.dataset.topic;state.question='';state.view='study';state.studyMode='topic';render();root.querySelector('.topic-workspace .question-reader')?.scrollIntoView({block:'start'});save();return;}
+    if(button.dataset.question){state.question=button.dataset.question;render();root.querySelector('.topic-workspace .question-reader')?.scrollIntoView({block:'start'});save();return;}
     if(button.dataset.chapter){state.yearChapter=state.yearChapter===button.dataset.chapter?'':button.dataset.chapter;state.outlineQuestion='';render();save();return;}
     if(button.dataset.clearChapter){state.yearChapter='';render();save();return;}
     if(button.dataset.questionFocus){state.questionFocus=button.dataset.questionFocus;render();save();return;}
