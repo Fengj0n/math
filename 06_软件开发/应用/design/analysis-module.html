@@ -222,26 +222,26 @@
 #math2-analysis-two-parts .paper-browser .outline-allocation{height:70px;margin:0 0 16px}
 #math2-analysis-two-parts .paper-browser .outline-allocation button{gap:5px;font-size:14px}
 #math2-analysis-two-parts .paper-browser .outline-allocation button small{font-size:14px;white-space:nowrap}
-#math2-analysis-two-parts .paper-overview{border-top:1px solid var(--r-line);border-bottom:1px solid var(--r-line);margin:0 0 18px;padding:12px 0}
-#math2-analysis-two-parts .paper-overview>summary{color:var(--r-text);font-size:15px}
-#math2-analysis-two-parts .paper-overview .chapter-distribution{border:0;padding:0;margin:15px 0}
-#math2-analysis-two-parts .paper-overview .chapter-distribution>h3{display:none}
-#math2-analysis-two-parts .paper-overview .chapter-facets{grid-template-columns:1fr;gap:16px}
-#math2-analysis-two-parts .paper-overview .chapter-bar{grid-template-columns:102px minmax(0,1fr) 48px;gap:6px;padding:6px 0}
-#math2-analysis-two-parts .paper-overview .chapter-axis{margin-left:108px;margin-right:54px}
-#math2-analysis-two-parts .paper-overview .chapter-value small{display:none}
-#math2-analysis-two-parts .paper-overview .outline-profiles{grid-template-columns:1fr;gap:18px;margin:17px 0 3px}
-#math2-analysis-two-parts .paper-browser .outline-heading h3{font-size:16px}
-#math2-analysis-two-parts .paper-choice{display:grid;grid-template-columns:30px minmax(0,1fr);gap:11px;align-items:start;width:100%;padding:13px 9px;border-bottom:1px solid var(--r-line);border-radius:5px;text-align:left}
+#math2-analysis-two-parts .paper-browser .chapter-distribution{border:0;padding:16px 0 0;margin:0;border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .paper-browser .chapter-distribution>h3{font-size:16px}
+#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:1fr;gap:18px;margin-top:15px}
+#math2-analysis-two-parts .paper-browser .chapter-bar{grid-template-columns:116px minmax(0,1fr) 43px;gap:6px;padding:5px 0;min-height:32px}
+#math2-analysis-two-parts .paper-browser .chapter-axis{margin-left:122px;margin-right:49px}
+#math2-analysis-two-parts .paper-browser .chapter-value small{display:none}
+#math2-analysis-two-parts .paper-browser .chapter-bar[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand)}
+#math2-analysis-two-parts .paper-browser .chapter-bar[aria-pressed=true] .chapter-fill{background:var(--r-selected)}
+#math2-analysis-two-parts .paper-detail .outline-heading{margin-bottom:12px}
+#math2-analysis-two-parts .paper-detail .outline-heading h3{font-size:16px}
+#math2-analysis-two-parts .paper-detail .outline-heading button{font-size:14px;color:var(--r-brand);padding:5px 0}
+#math2-analysis-two-parts .paper-questions{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 17px}
+#math2-analysis-two-parts .paper-choice{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid var(--r-line);border-radius:5px}
 #math2-analysis-two-parts .paper-choice[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand)}
 #math2-analysis-two-parts .paper-choice-number{font-size:16px;font-variant-numeric:tabular-nums}
-#math2-analysis-two-parts .paper-choice-text{min-width:0;display:grid;gap:6px;font-size:15px;overflow-wrap:anywhere}
-#math2-analysis-two-parts .paper-choice-meta{font-size:14px;color:var(--r-muted)}
 #math2-analysis-two-parts .paper-detail{min-width:0;align-self:start;position:sticky;top:16px}
 #math2-analysis-two-parts .paper-detail .reader-layout{grid-template-columns:1fr}
 #math2-analysis-two-parts .paper-detail .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}
-@media(max-width:760px){#math2-analysis-two-parts .paper-split{grid-template-columns:1fr;gap:20px}#math2-analysis-two-parts .paper-browser{border-right:0;padding-right:0}#math2-analysis-two-parts .paper-detail{position:static}#math2-analysis-two-parts .paper-questions{display:flex;gap:7px;flex-wrap:wrap}#math2-analysis-two-parts .paper-choice{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid var(--r-line)}#math2-analysis-two-parts .paper-choice-text{display:none}#math2-analysis-two-parts .paper-overview .chapter-facets{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:580px){#math2-analysis-two-parts .paper-browser .outline-allocation{flex-direction:row;height:70px}#math2-analysis-two-parts .paper-browser .outline-allocation button{flex-direction:column;gap:3px;padding:0}#math2-analysis-two-parts .paper-overview .chapter-facets{grid-template-columns:1fr}}
+@media(max-width:760px){#math2-analysis-two-parts .paper-split{grid-template-columns:1fr;gap:22px}#math2-analysis-two-parts .paper-browser{border-right:0;padding-right:0}#math2-analysis-two-parts .paper-detail{position:static}#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){#math2-analysis-two-parts .paper-browser .outline-allocation{flex-direction:row;height:70px}#math2-analysis-two-parts .paper-browser .outline-allocation button{flex-direction:column;gap:3px;padding:0}#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:1fr;gap:16px}#math2-analysis-two-parts .paper-browser .chapter-bar{grid-template-columns:116px minmax(0,1fr) 43px}#math2-analysis-two-parts .paper-browser .chapter-track{grid-column:auto;grid-row:auto}}
 #math2-analysis-two-parts .outline-note{margin-top:16px;font-size:14px;color:var(--r-muted)}
 #math2-analysis-two-parts .study-tabs{display:flex;gap:24px;border-bottom:1px solid var(--r-line);margin-bottom:24px}
 #math2-analysis-two-parts .study-tabs button{font-size:16px;padding:10px 5px;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--r-muted);white-space:nowrap}
@@ -253,7 +253,7 @@
 @media(max-width:580px){#math2-analysis-two-parts .chapter-bar{grid-template-columns:minmax(0,1fr) 72px;gap:4px 8px;padding:8px 0;font-size:14px}#math2-analysis-two-parts .chapter-track{grid-column:1/-1;grid-row:2}#math2-analysis-two-parts .chapter-axis{margin:0 0 5px}}
 @media(max-width:860px){#math2-analysis-two-parts .annual-charts{grid-template-columns:1fr;gap:28px}}
 @media(max-width:580px){#math2-analysis-two-parts .question-map-line{grid-template-columns:1fr;gap:6px}#math2-analysis-two-parts .question-map-type small{display:inline;margin-left:8px}#math2-analysis-two-parts .difficulty-heading{margin-bottom:18px}#math2-analysis-two-parts .annual-row{margin-left:0;margin-right:0;padding:6px 0;grid-template-columns:36px minmax(0,1fr);gap:7px}#math2-analysis-two-parts .chart-axis{margin-left:43px;padding-left:0;padding-right:0}#math2-analysis-two-parts .research-tabs button{font-size:14px;padding:8px 10px}}
-@media(pointer:coarse){#math2-analysis-two-parts .question-map-cells button{width:44px;height:44px}#math2-analysis-two-parts .annual-row{min-height:44px}}
+@media(pointer:coarse){#math2-analysis-two-parts .paper-browser .chapter-bar{min-height:44px}#math2-analysis-two-parts .question-map-cells button{width:44px;height:44px}#math2-analysis-two-parts .annual-row{min-height:44px}}
 </style>
 <div id="math2-analysis-two-parts" aria-label="数学二命题分析两部分设计">
   <header class="research-header"><div class="research-brand">数研智枢 <span>／ 命题分析</span></div></header>
@@ -352,10 +352,9 @@
     if(state.yearChapter&&!rows.some(q=>q.chapter===state.yearChapter))state.yearChapter='';
     const items=rows.filter(q=>state.yearChapter?q.chapter===state.yearChapter:q.type===state.outlineType),total=points(rows);
     const selected=items.find(q=>q.id===state.outlineQuestion)||items[0];state.outlineQuestion=selected.id;
-    const overviewOpen=root.querySelector('.paper-overview')?.open||false;
     const listTitle=state.yearChapter||`${state.outlineType} · 第${items[0].original_number}—${items[items.length-1].original_number}题`;
     const allocation=types.map(type=>{const rs=rows.filter(q=>q.type===type);return `<button type="button" class="cursor-interaction" data-outline-type="${type}" style="flex:1" aria-pressed="${!state.yearChapter&&state.outlineType===type}" aria-label="${type}，${rs.length}题，${points(rs)}分"><span>${type}</span><small>${rs.length}题 · ${points(rs)}分</small></button>`;}).join('');
-    return `<section><header class="paper-heading"><div><h2>${state.year}年 · 年度试卷</h2><p class="paper-meta">${rows.length}题 · ${total}分 · 高数${points(rows.filter(q=>q.subject==='高等数学'))}分 / 线代${points(rows.filter(q=>q.subject==='线性代数'))}分</p></div>${yearPicker()}</header><div class="paper-split"><aside class="paper-browser" aria-label="年度试卷选题"><h3 class="paper-structure-title">题型</h3><div class="outline-allocation" aria-label="题型选择">${allocation}</div><details class="paper-overview" ${overviewOpen?'open':''}><summary>整卷分值分布</summary>${chapterDistribution(rows)}<div class="outline-profiles">${outlineProfile(rows,'difficulty')}${outlineProfile(rows,'calculation')}</div></details><div class="outline-heading"><div><h3>${esc(listTitle)}</h3><p>${items.length}题 · ${points(items)}分</p></div>${state.yearChapter?'<button type="button" class="cursor-interaction" data-clear-chapter="true">清除章节筛选</button>':''}</div><div class="paper-questions" aria-label="${esc(state.yearChapter||state.outlineType)}对应题目">${items.map(q=>`<button type="button" class="paper-choice cursor-interaction" data-outline-question="${esc(q.id)}" aria-pressed="${selected.id===q.id}" aria-label="第${q.original_number}题，${esc(q.model)}，${q.original_points}分，难度${difficulty(q)}，计算量${cost(q)}"><span class="paper-choice-number">${num(q.original_number).padStart(2,'0')}</span><span class="paper-choice-text"><span>${esc(q.model)}</span><span class="paper-choice-meta">${esc(q.chapter)} · ${q.original_points}分</span></span></button>`).join('')}</div></aside><section class="paper-detail" aria-label="选中题目"><div class="paper-reader-content">${questionReader(selected)}<div class="reader-route"><span>${esc(selected.model)}</span><button type="button" class="cursor-interaction" data-open-question="${esc(selected.id)}">查看同类考法 →</button></div></div></section></div></section>`;
+    return `<section><header class="paper-heading"><div><h2>${state.year}年 · 年度试卷</h2><p class="paper-meta">${rows.length}题 · ${total}分 · 高数${points(rows.filter(q=>q.subject==='高等数学'))}分 / 线代${points(rows.filter(q=>q.subject==='线性代数'))}分</p></div>${yearPicker()}</header><div class="paper-split"><aside class="paper-browser" aria-label="年度试卷选题"><h3 class="paper-structure-title">题型</h3><div class="outline-allocation" aria-label="题型选择">${allocation}</div>${chapterDistribution(rows)}</aside><section class="paper-detail" aria-label="对应题目与原题"><div class="outline-heading"><div><h3>${esc(listTitle)}</h3><p>${items.length}题 · ${points(items)}分</p></div>${state.yearChapter?'<button type="button" class="cursor-interaction" data-clear-chapter="true">清除章节筛选</button>':''}</div><div class="paper-questions" aria-label="${esc(state.yearChapter||state.outlineType)}对应题目">${items.map(q=>`<button type="button" class="paper-choice cursor-interaction" data-outline-question="${esc(q.id)}" aria-pressed="${selected.id===q.id}" aria-label="第${q.original_number}题，${esc(q.model)}，${q.original_points}分，难度${difficulty(q)}，计算量${cost(q)}"><span class="paper-choice-number">${num(q.original_number).padStart(2,'0')}</span></button>`).join('')}</div><div class="paper-reader-content">${questionReader(selected)}<div class="reader-route"><span>${esc(selected.model)}</span><button type="button" class="cursor-interaction" data-open-question="${esc(selected.id)}">查看同类考法 →</button></div></div></section></div></section>`;
   }
   function renderStudy(){return `<nav class="study-tabs" aria-label="试卷分析视图">${[{value:'year',label:'年度试卷'},{value:'topic',label:'考法研究'}].map(v=>`<button type="button" class="cursor-interaction" data-study-mode="${v.value}" aria-pressed="${state.studyMode===v.value}">${v.label}</button>`).join('')}</nav>${state.studyMode==='year'?renderPaper():renderTopic()}`;}
   const bands={difficulty:[{name:'1–2级 · 基础与较易',short:'1–2级',levels:[1,2],cls:'band-d0'},{name:'3级 · 中等',short:'3级',levels:[3],cls:'band-d1'},{name:'4–5级 · 较难与很难',short:'4–5级',levels:[4,5],cls:'band-d2'}],calculation:[{name:'低计算量',short:'低',levels:[1],cls:'band-c0'},{name:'中计算量',short:'中',levels:[2],cls:'band-c1'},{name:'高计算量',short:'高',levels:[3],cls:'band-c2'}]};
