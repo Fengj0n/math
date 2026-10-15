@@ -302,3 +302,14 @@
 #math2-analysis-two-parts{border:0;border-radius:0;overflow:visible;background:transparent}#math2-analysis-two-parts [hidden]{display:none!important}
 
 #math2-analysis-two-parts .scope-label{white-space:nowrap}#math2-analysis-two-parts .scope-label select{width:auto;min-width:0}
+
+/* Keep catalogue browsing separate from reading the selected question. */
+@media(min-width:781px){
+  #math2-analysis-two-parts .topic-shell{height:max(280px,calc(100dvh - 350px));align-items:stretch;min-height:0}
+  #math2-analysis-two-parts .topic-navigation,#math2-analysis-two-parts .topic-workspace{min-height:0;overflow-y:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable}
+  #math2-analysis-two-parts .topic-workspace{min-width:0;padding-right:10px}
+}
+@media(max-width:780px){
+  #math2-analysis-two-parts .topic-navigation{max-height:36dvh;overflow-y:auto;overscroll-behavior-y:contain}
+  #math2-analysis-two-parts .topic-workspace{min-width:0;scroll-margin-top:16px}
+}

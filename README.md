@@ -14,6 +14,7 @@
 
 ## 版本检查点
 
+- `checkpoint-20261015-topic-scroll`：考法目录与题目阅读区分别滚动，保留目录位置，切换考法后直接显示对应题目；正式软件继续等待各模块统一确认。
 - `checkpoint-20261015-analysis-integrated`：命题分析接入软件源码，读取当前题库，提供使用独立数据副本的预览启动入口，正式版暂未覆盖。
 - `checkpoint-20261015-question-bank-before-merged-sidebar`：题库合并侧栏前的设计，保留独立章节目录和完整题面列表。
 - `checkpoint-20261015-question-bank-merged-sidebar`：已撤回的合并侧栏试验，仅保留历史追溯。
