@@ -54,12 +54,12 @@ try:
         browser=pw.chromium.launch(headless=True)
         page=browser.new_page(viewport={'width':1100,'height':1000});page.on('pageerror',lambda e:errors.append(str(e)))
         page.goto(base,wait_until='networkidle')
-        page.get_by_role('button',name='素材库',exact=True).click()
+        page.get_by_role('button',name='题库',exact=True).click()
         page.get_by_label('核验筛选').select_option('eligible')
         page.get_by_label('来源筛选').select_option('880')
         page.get_by_text('共 59 条 · 已选 0 题',exact=True).wait_for()
         assert not page.locator('.math-error').count(),'素材预览发生公式截断'
-        page.screenshot(path=str(out/'880素材库.png'),full_page=True)
+        page.screenshot(path=str(out/'880题库.png'),full_page=True)
         page.route('**/api/papers/P-LAYOUT-AUDIT?*',intercept)
         page.goto(base+'/?print=P-LAYOUT-AUDIT&kind=answers',wait_until='networkidle');page.wait_for_function('window.printReady === true')
         bulk_errors=page.locator('.math-error').all_text_contents();assert not bulk_errors,bulk_errors[:5]

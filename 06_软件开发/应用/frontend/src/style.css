@@ -173,16 +173,16 @@ input[type=file]::file-selector-button { font: inherit; padding: 6px 12px; margi
 .answer-panel { border: 1px solid var(--line); }
 .answer-panel h3 { margin-top: 0; }
 .bank-table { background: var(--surface); }
-.app-shell[data-page='素材库'] .bank-table { max-height: none; overflow-x: auto; overflow-y: visible; }
+.app-shell[data-page='题库'] .bank-table { max-height: none; overflow-x: auto; overflow-y: visible; }
 .bank-table td:first-child { width: 60px; text-align: center; }
 .bank-table td:last-child { width: 88px; white-space: nowrap; }
 .bank-table tbody tr:has(input:checked) { background: var(--accent-soft); }
 .table-wrap tbody tr.selected-row, .table-wrap tbody tr.selected-row:hover { background: var(--accent-soft); }
 .bank-table td:nth-child(2)>b { font-size: 16px; }
 .bank-table .stem-snippet { color: var(--text); font-size: 14px; }
-.app-shell[data-page='素材库'] .toolbar { display: grid; grid-template-columns: minmax(220px,1.65fr) repeat(6,minmax(105px,1fr)); gap: 10px; }
-.app-shell[data-page='素材库'] .toolbar select { width: 100%; max-width: none; }
-.app-shell[data-page='素材库'] .toolbar .search { min-width: 0; }
+.app-shell[data-page='题库'] .toolbar { display: grid; grid-template-columns: minmax(220px,1.65fr) repeat(6,minmax(105px,1fr)); gap: 10px; }
+.app-shell[data-page='题库'] .toolbar select { width: 100%; max-width: none; }
+.app-shell[data-page='题库'] .toolbar .search { min-width: 0; }
 .app-shell[data-page='组卷与导出'] .workspace>.panel .form-grid { grid-template-columns: minmax(0,1.3fr) minmax(0,1.6fr) minmax(100px,.55fr); }
 .paper-item .section-heading { font-size: 15px; }
 .paper-item .section-heading>b { color: var(--ink); font-size: 17px; }
@@ -232,8 +232,8 @@ input[type=file]::file-selector-button { font: inherit; padding: 6px 12px; margi
 
   .chapter-columns, .chapter-row { grid-template-columns: 170px minmax(32px,1fr) 52px 68px; }
   .structure-panel .text-button { margin-top: 16px; }
-  .app-shell[data-page='素材库'] .toolbar { grid-template-columns: repeat(4,minmax(0,1fr)); }
-  .app-shell[data-page='素材库'] .toolbar .search { grid-column: span 2; }
+  .app-shell[data-page='题库'] .toolbar { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .app-shell[data-page='题库'] .toolbar .search { grid-column: span 2; }
 }
 @media(max-width:900px) { .split { grid-template-columns: 1fr; }.topic-cards { grid-template-columns: repeat(2,minmax(0,1fr)); }.document-grid { grid-template-columns: 1fr; } }
 @media(max-width:760px) {
@@ -254,7 +254,7 @@ input[type=file]::file-selector-button { font: inherit; padding: 6px 12px; margi
   .analysis-shell .topbar { padding: 0 16px; }
   .analysis-tabs { gap: 24px; }.chapter-columns { display: none; }.chapter-row { grid-template-columns: minmax(32px,1fr) 52px 68px; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }.chapter-name { grid-column: 1 / -1; white-space: normal; }.bar-count { font-size: 17px; }.bar-points { font-size: 16px; }
   .subject-strip { flex-wrap: wrap; }
-  .app-shell[data-page='素材库'] .toolbar { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .app-shell[data-page='题库'] .toolbar { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .app-shell[data-page='组卷与导出'] .workspace>.panel .form-grid { grid-template-columns: 1fr; }
   .question-ratings { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .bank-table th:nth-child(4), .bank-table td:nth-child(4) { min-width: 180px; }

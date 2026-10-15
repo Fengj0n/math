@@ -24,7 +24,7 @@ export default function SelectionBasket({ids,onRemove,onClose,onSave,onLock,busy
     if(n)locks[n]=q.id;else problems.push(`${label}没有剩余的匹配题位；未改变原分值。`);
   }
   return <AnalysisDrawer title="已选题" subtitle={`${ids.length}道题`} onClose={onClose}>
-    {!ids.length&&<div className="empty"><p>还没有选题，可从考法分析或素材库加入。</p></div>}
+    {!ids.length&&<div className="empty"><p>还没有选题，可从考法分析或题库加入。</p></div>}
     {loading&&<p role="status">正在读取选题…</p>}
     <div className="selection-list">{ids.map((id,i)=>{const q=questions.get(id);return <article key={id}><header><div><b>{i+1}. {q?(q.source==='历年真题'?`${q.year}年 · 第${q.original_number}题`:`${q.source} · 第${q.original_number}题`):'题目读取中'}</b>{q&&<small>{q.type} · {q.original_points??'未记录'}分 · {q.point}</small>}</div><button className="secondary" disabled={busy} onClick={()=>onRemove(id)}>移出</button></header>{q&&<><QuestionBody question={q}/>{!q.eligible&&<p className="error-text">此题当前不可用于组卷，请移出或重新核验。</p>}<details><summary>答案与解答</summary><p><MathText text={q.answer}/></p><MathText text={q.solution}/></details></>}{errors.get(id)&&<p className="error-text">{errors.get(id)}</p>}</article>})}</div>
     {problems.length>0&&<details className="selection-problems"><summary>标准组卷暂不可用 · {problems.length}项</summary>{problems.map((p,i)=><p key={i}>{p}</p>)}</details>}
