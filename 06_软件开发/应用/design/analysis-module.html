@@ -245,20 +245,23 @@
 #math2-analysis-two-parts .comparison-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:16px}
 #math2-analysis-two-parts .comparison-title h3{font-size:16px}
 #math2-analysis-two-parts .comparison-title>span{font-size:14px;color:var(--r-muted)}
-#math2-analysis-two-parts .comparison-head,#math2-analysis-two-parts .comparison-year-row{display:grid;grid-template-columns:40px repeat(2,minmax(0,1fr));gap:10px;align-items:center}
-#math2-analysis-two-parts .comparison-head{font-size:16px;color:var(--r-text);padding:0 0 9px}
-#math2-analysis-two-parts .comparison-year-row{width:100%;min-height:32px;padding:3px 0;border-radius:4px;margin-bottom:0;font-size:14px;font-variant-numeric:tabular-nums}
-#math2-analysis-two-parts .comparison-year-row:hover,#math2-analysis-two-parts .comparison-year-row[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-text)}
-#math2-analysis-two-parts .comparison-year-row[aria-pressed=true] .comparison-year{color:var(--r-brand);font-weight:500}
-#math2-analysis-two-parts .comparison-period-break{margin-top:8px;padding-top:10px;border-top:1px solid var(--r-line);border-radius:0}
-#math2-analysis-two-parts .comparison-track{display:flex;min-width:0;height:24px;background:var(--r-soft);border-radius:2px;overflow:hidden}
-#math2-analysis-two-parts .comparison-track>span{height:100%;display:flex;align-items:center;justify-content:center;min-width:0}
-#math2-analysis-two-parts .comparison-value{font-size:14px;font-variant-numeric:tabular-nums}
-#math2-analysis-two-parts .comparison-legends{display:grid;grid-template-columns:40px repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
-#math2-analysis-two-parts .comparison-legend{display:flex;flex-wrap:wrap;gap:7px 11px;font-size:14px;color:var(--r-muted)}
-#math2-analysis-two-parts .comparison-legend:first-child{grid-column:2}
-#math2-analysis-two-parts .comparison-legend+.comparison-legend{margin-top:0}
-#math2-analysis-two-parts .comparison-legend>span{display:flex;align-items:center;gap:4px}
+#math2-analysis-two-parts .assessment-column-legend{display:flex;justify-content:space-between;gap:10px 30px;flex-wrap:wrap;margin-bottom:18px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .assessment-legend-group{display:flex;gap:7px 13px;flex-wrap:wrap;align-items:center}
+#math2-analysis-two-parts .assessment-legend-group>span{display:flex;gap:4px;align-items:center}
+#math2-analysis-two-parts .assessment-column-panel{display:grid;grid-template-columns:32px minmax(0,1fr);gap:8px;margin:0 0 18px}
+#math2-analysis-two-parts .assessment-column-axis{height:190px;position:relative;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .assessment-column-axis>span{position:absolute;right:0;transform:translateY(50%)}
+#math2-analysis-two-parts .assessment-column-area{min-width:0;position:relative}
+#math2-analysis-two-parts .assessment-column-grid{position:absolute;top:0;left:0;right:0;height:190px;pointer-events:none}
+#math2-analysis-two-parts .assessment-column-grid>span{position:absolute;left:0;right:0;border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .assessment-column-years{position:relative;display:grid;gap:4px}
+#math2-analysis-two-parts .assessment-column-year{display:flex;flex-direction:column;align-items:center;gap:7px;padding:0;min-width:0;border-radius:4px;font-size:14px}
+#math2-analysis-two-parts .assessment-column-year:hover,#math2-analysis-two-parts .assessment-column-year[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-text)}
+#math2-analysis-two-parts .assessment-column-year[aria-pressed=true] .assessment-year-label{color:var(--r-brand);font-weight:500}
+#math2-analysis-two-parts .assessment-column-pair{display:flex;justify-content:center;gap:5px;width:100%;height:190px}
+#math2-analysis-two-parts .assessment-column-stack{display:flex;flex-direction:column-reverse;width:min(24px,40%);height:100%;min-width:0;overflow:hidden;border-radius:2px}
+#math2-analysis-two-parts .assessment-column-stack>span{display:block;width:100%;flex-shrink:0}
+#math2-analysis-two-parts .assessment-year-label{min-height:24px;font-size:14px;font-variant-numeric:tabular-nums}
 #math2-analysis-two-parts .difficulty-detail{min-width:0;border-top:1px solid var(--r-line);padding-top:22px}
 #math2-analysis-two-parts .difficulty-year-heading{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
 #math2-analysis-two-parts .difficulty-year-heading h3{font-size:20px;font-weight:500}
@@ -279,8 +282,7 @@
 #math2-analysis-two-parts .rating-source>summary{font-size:15px;color:var(--r-brand);padding:7px 0}
 #math2-analysis-two-parts .rating-source[open]>summary{margin-bottom:12px}
 @media(max-width:760px){#math2-analysis-two-parts .difficulty-detail .question-map-line{grid-template-columns:1fr;gap:6px}#math2-analysis-two-parts .year-composition{grid-template-columns:1fr;gap:5px}}
-@media(max-width:680px){#math2-analysis-two-parts .comparison-value{display:none}#math2-analysis-two-parts .comparison-head{font-size:14px}}
-@media(pointer:coarse){#math2-analysis-two-parts .comparison-year-row{min-height:44px}#math2-analysis-two-parts .difficulty-detail .question-map-cells button{width:44px;height:44px}}
+@media(pointer:coarse){#math2-analysis-two-parts .difficulty-detail .question-map-cells button{width:44px;height:44px}}
 @media(max-width:760px){#math2-analysis-two-parts .paper-split{grid-template-columns:1fr;gap:22px}#math2-analysis-two-parts .paper-browser{border-right:0;padding-right:0}#math2-analysis-two-parts .paper-detail{position:static}#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){#math2-analysis-two-parts .paper-browser .outline-allocation{flex-direction:row;height:70px}#math2-analysis-two-parts .paper-browser .outline-allocation button{flex-direction:column;gap:3px;padding:0}#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:1fr;gap:16px}#math2-analysis-two-parts .paper-browser .chapter-bar{grid-template-columns:116px minmax(0,1fr) 43px}#math2-analysis-two-parts .paper-browser .chapter-track{grid-column:auto;grid-row:auto}}
 #math2-analysis-two-parts .outline-note{margin-top:16px;font-size:14px;color:var(--r-muted)}
@@ -400,9 +402,17 @@
   function renderStudy(){return `<nav class="study-tabs" aria-label="试卷分析视图">${[{value:'year',label:'年度试卷'},{value:'topic',label:'考法研究'}].map(v=>`<button type="button" class="cursor-interaction" data-study-mode="${v.value}" aria-pressed="${state.studyMode===v.value}">${v.label}</button>`).join('')}</nav>${state.studyMode==='year'?renderPaper():renderTopic()}`;}
   const bands={difficulty:[{name:'1–2级 · 基础与较易',short:'1–2级',levels:[1,2],cls:'band-d0'},{name:'3级 · 中等',short:'3级',levels:[3],cls:'band-d1'},{name:'4–5级 · 较难与很难',short:'4–5级',levels:[4,5],cls:'band-d2'}],calculation:[{name:'低计算量',short:'低',levels:[1],cls:'band-c0'},{name:'中计算量',short:'中',levels:[2],cls:'band-c1'},{name:'高计算量',short:'高',levels:[3],cls:'band-c2'}]};
   function parts(rows,key){return bands[key].map(b=>({...b,points:points(rows.filter(q=>b.levels.includes(q[key]))),count:rows.filter(q=>b.levels.includes(q[key])).length}));}
+  let comparisonCapacity=0;
+  function annualColumnCapacity(){
+    const rootWidth=root.clientWidth||976,available=(main.clientWidth||rootWidth)-(rootWidth<=580?32:52);
+    return Math.max(4,Math.min(13,Math.floor((available-40)/48)));
+  }
   function annualComparison(years){
-    const legend=key=>`<div class="comparison-legend"><span>${key==='difficulty'?'难度':'计算量'}</span>${bands[key].map(b=>`<span><i class="chart-swatch ${b.cls}" aria-hidden="true"></i>${key==='difficulty'?b.short:b.name.replace('计算量','')}</span>`).join('')}</div>`;
-    return `<aside class="year-comparison" aria-label="历年难度与计算量分值构成"><div class="comparison-title"><h3>历年对比</h3><span>150分 / 年</span></div><div class="comparison-head" aria-hidden="true"><span>年份</span><span>难度分值构成</span><span>计算量分值构成</span></div>${years.map(y=>{const qs=scoped().filter(q=>q.year===y),ds=parts(qs,'difficulty'),cs=parts(qs,'calculation'),label=`${y}年，难度：${ds.map(b=>`${b.short}${b.points}分`).join('，')}；计算量：${cs.map(b=>`${b.short}${b.points}分`).join('，')}`;const bar=ps=>`<span class="comparison-track" aria-hidden="true">${ps.filter(b=>b.points>0).map(b=>`<span class="${b.cls}" style="width:${b.points/150*100}%">${b.points>=12?`<span class="comparison-value">${b.points}</span>`:''}</span>`).join('')}</span>`;return `<button type="button" class="comparison-year-row cursor-interaction${y===2020&&years.includes(2021)?' comparison-period-break':''}" data-year="${y}" aria-pressed="${state.year===y}" aria-label="${esc(label)}" data-tooltip="${esc(label)}"><span class="comparison-year">${y}</span>${bar(ds)}${bar(cs)}</button>`;}).join('')}<div class="comparison-legends">${legend('difficulty')}${legend('calculation')}</div></aside>`;
+    comparisonCapacity=annualColumnCapacity();const ordered=[...years].sort((a,b)=>a-b),panels=Math.ceil(ordered.length/comparisonCapacity),base=Math.floor(ordered.length/panels),extra=ordered.length%panels,batches=[];let offset=0;
+    for(let i=0;i<panels;i++){const size=base+(i<extra?1:0);batches.push(ordered.slice(offset,offset+size));offset+=size;}
+    const legend=key=>`<div class="assessment-legend-group"><span>${key==='difficulty'?'左柱 · 难度':'右柱 · 计算量'}</span>${bands[key].map(b=>`<span><i class="chart-swatch ${b.cls}" aria-hidden="true"></i>${b.short}</span>`).join('')}</div>`;
+    const ticks=[0,50,100,150],bar=ps=>`<span class="assessment-column-stack" aria-hidden="true">${ps.filter(b=>b.points>0).map(b=>`<span class="${b.cls}" style="height:${b.points/150*100}%"></span>`).join('')}</span>`;
+    return `<section class="year-comparison" aria-label="历年难度与计算量分值构成"><div class="comparison-title"><h3>历年对比</h3><span>分值 · 满分150</span></div><div class="assessment-column-legend">${legend('difficulty')}${legend('calculation')}</div>${batches.map(batch=>`<div class="assessment-column-panel" role="group" aria-label="${batch[0]}至${batch[batch.length-1]}年"><div class="assessment-column-axis" aria-hidden="true">${ticks.map(v=>`<span style="bottom:${v/150*100}%">${v}</span>`).join('')}</div><div class="assessment-column-area"><div class="assessment-column-grid" aria-hidden="true">${ticks.map(v=>`<span style="bottom:${v/150*100}%"></span>`).join('')}</div><div class="assessment-column-years" style="grid-template-columns:repeat(${batch.length},minmax(0,1fr))">${batch.map(y=>{const qs=scoped().filter(q=>q.year===y),ds=parts(qs,'difficulty'),cs=parts(qs,'calculation'),label=`${y}年，难度：${ds.map(b=>`${b.short}${b.points}分`).join('，')}；计算量：${cs.map(b=>`${b.short}${b.points}分`).join('，')}`;return `<button type="button" class="assessment-column-year cursor-interaction" data-year="${y}" aria-pressed="${state.year===y}" aria-label="${esc(label)}" data-tooltip="${esc(label)}"><span class="assessment-column-pair">${bar(ds)}${bar(cs)}</span><span class="assessment-year-label">${y}</span></button>`;}).join('')}</div></div></div>`).join('')}</section>`;
   }
   function renderDifficulty(){
     const years=ensureYear(),qs=scoped().filter(q=>q.year===state.year).sort((a,b)=>a.original_number-b.original_number),ds=parts(qs,'difficulty'),cs=parts(qs,'calculation');
@@ -443,6 +453,6 @@
   restore(window.openai?.widgetState);render();
   window.addEventListener('openai:set_globals',event=>{if(event.detail?.globals?.widgetState){restore(event.detail.globals.widgetState);render();}});
   if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:()=>{render();save();}});tweak.addSelect(state,'readerLayout',{label:'题干与分析的排列方式',options:[{label:'上下串读',value:'stacked'},{label:'左右对读',value:'parallel'}]});}
-  if(globalThis.ResizeObserver)new ResizeObserver(fitFormulae).observe(root);
+  if(globalThis.ResizeObserver)new ResizeObserver(()=>{fitFormulae();if(state.view==='difficulty'&&annualColumnCapacity()!==comparisonCapacity)render();}).observe(root);
 })();
 </script>
