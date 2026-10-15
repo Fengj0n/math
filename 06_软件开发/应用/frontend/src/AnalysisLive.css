@@ -1,0 +1,304 @@
+
+
+#math2-analysis-two-parts{--r-bg:light-dark(#f7f8f5,#141917);--r-surface:light-dark(#ffffff,#1c2320);--r-text:light-dark(#24312b,#e6ede8);--r-muted:light-dark(#617269,#a6b8ad);--r-line:light-dark(#dee6df,#34443a);--r-soft:light-dark(#edf2ed,#27332c);--r-brand:light-dark(#286347,#88c59d);--r-brand-soft:light-dark(#e6f0e8,#243e2d);--r-selected:light-dark(#214c36,#b7d9c0);--r-selected-text:light-dark(#ffffff,#15251b);--r-warning:light-dark(#8a6132,#d8b480);font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.7;color:var(--r-text);background:var(--r-bg);border:1px solid var(--r-line);border-radius:12px;overflow:clip;color-scheme:light dark}
+#math2-analysis-two-parts *{box-sizing:border-box}
+#math2-analysis-two-parts h1,#math2-analysis-two-parts h2,#math2-analysis-two-parts h3,#math2-analysis-two-parts h4,#math2-analysis-two-parts p{margin:0}
+#math2-analysis-two-parts h1{font-size:27px;font-weight:500;line-height:1.4;letter-spacing:-.5px;margin-top:4px}
+#math2-analysis-two-parts h2{font-size:23px;font-weight:500;line-height:1.5}
+#math2-analysis-two-parts h3{font-size:16px;font-weight:500}
+#math2-analysis-two-parts h4{font-size:14px;font-weight:500}
+#math2-analysis-two-parts strong,#math2-analysis-two-parts b{font-weight:500}
+#math2-analysis-two-parts button,#math2-analysis-two-parts select{font:inherit;color:inherit}
+#math2-analysis-two-parts button{border:0;background:transparent;text-align:left;padding:0}
+#math2-analysis-two-parts button:hover{color:var(--r-brand)}
+#math2-analysis-two-parts button[disabled]{opacity:.55;cursor:not-allowed}
+#math2-analysis-two-parts select{border:1px solid var(--r-line);background:var(--r-surface);border-radius:6px;padding:7px 10px;max-width:100%}
+#math2-analysis-two-parts .research-header{display:flex;align-items:center;gap:14px;padding:14px 114px 14px 26px;border-bottom:1px solid var(--r-line);background:var(--r-surface);min-height:57px;flex-wrap:wrap}
+#math2-analysis-two-parts .research-brand{font-weight:500}
+#math2-analysis-two-parts .research-brand span{color:var(--r-muted);font-weight:400;margin-left:9px}
+#math2-analysis-two-parts .prototype-label{font-size:14px;color:var(--r-muted);padding:2px 7px;background:var(--r-soft);border-radius:4px}
+#math2-analysis-two-parts .research-intro{display:flex;align-items:center;justify-content:space-between;padding:25px 26px 22px;gap:20px}
+#math2-analysis-two-parts .eyebrow{font-size:14px;letter-spacing:1px;color:var(--r-muted)}
+#math2-analysis-two-parts .source-summary{text-align:right;color:var(--r-muted);font-size:14px;white-space:nowrap}
+#math2-analysis-two-parts .source-summary strong{color:var(--r-text);font-size:14px}
+#math2-analysis-two-parts .research-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid var(--r-line);padding:16px 26px 14px;flex-wrap:wrap}
+#math2-analysis-two-parts .research-tabs{display:flex;gap:6px;flex-wrap:wrap}
+#math2-analysis-two-parts .research-tabs button{padding:8px 15px;border-radius:6px;font-size:14px;white-space:nowrap}
+#math2-analysis-two-parts .research-tabs button[aria-pressed=true]{background:var(--r-selected);color:var(--r-selected-text)}
+#math2-analysis-two-parts .scope-label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts #research-main{padding:23px 26px 27px}
+#math2-analysis-two-parts .topic-shell{display:grid;grid-template-columns:178px minmax(0,1fr);gap:25px}
+#math2-analysis-two-parts .topic-navigation{min-width:0;padding-right:18px;border-right:1px solid var(--r-line)}
+#math2-analysis-two-parts .navigation-heading{font-size:16px;color:var(--r-text);margin:0 0 5px;font-weight:500}
+#math2-analysis-two-parts .catalogue-count{font-size:14px;color:var(--r-muted);margin:0 0 12px}
+#math2-analysis-two-parts .catalogue{border-top:1px solid var(--r-line);padding-top:5px}
+#math2-analysis-two-parts summary{cursor:default;color:var(--r-muted);font-size:14px}
+#math2-analysis-two-parts .catalogue details{margin:0;border-bottom:1px solid var(--r-line)}
+#math2-analysis-two-parts .catalogue summary{padding:12px 0;font-size:14px;overflow-wrap:anywhere}
+#math2-analysis-two-parts .catalogue summary>span{color:var(--r-muted);margin-left:8px;white-space:nowrap}
+#math2-analysis-two-parts .catalogue-quantity{color:var(--r-muted);white-space:nowrap}
+#math2-analysis-two-parts .catalogue button{padding:10px 8px;font-size:14px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;width:100%;overflow-wrap:anywhere;border-radius:5px;text-align:left}
+#math2-analysis-two-parts .catalogue button[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand);font-weight:500}
+#math2-analysis-two-parts .breadcrumb{font-size:14px;color:var(--r-muted);margin-bottom:5px}
+#math2-analysis-two-parts .topic-meta{color:var(--r-muted);font-size:14px;margin:7px 0 15px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .research-focus{border-left:3px solid var(--r-brand);padding:2px 0 2px 14px;margin-bottom:15px}
+#math2-analysis-two-parts .research-focus>p{font-size:14px;margin-top:5px}
+#math2-analysis-two-parts .focus-kicker{font-size:14px;color:var(--r-brand)}
+#math2-analysis-two-parts .dimensions{display:flex;gap:6px 16px;flex-wrap:wrap;margin-top:10px;color:var(--r-muted);font-size:14px}
+#math2-analysis-two-parts .question-switcher{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--r-line);padding:16px 0 14px}
+#math2-analysis-two-parts .question-switcher button{padding:8px 11px;border:1px solid var(--r-line);border-radius:6px;background:var(--r-surface);font-size:14px}
+#math2-analysis-two-parts .question-switcher button span{display:block;color:var(--r-muted);font-size:14px}
+#math2-analysis-two-parts .question-switcher button[aria-pressed=true]{border-color:var(--r-brand);background:var(--r-brand-soft);color:var(--r-brand)}
+#math2-analysis-two-parts .question-switcher button[aria-pressed=true] span{color:var(--r-brand)}
+#math2-analysis-two-parts .question-reader{background:var(--r-surface);border:1px solid var(--r-line);border-radius:8px;padding:20px;min-width:0}
+#math2-analysis-two-parts .reader-heading{display:flex;justify-content:space-between;gap:12px;align-items:start;flex-wrap:wrap}
+#math2-analysis-two-parts .reader-heading h3{font-size:16px}
+#math2-analysis-two-parts .reader-meta{font-size:14px;color:var(--r-muted);margin-top:3px}
+#math2-analysis-two-parts .small-action{font-size:14px;color:var(--r-brand);padding:5px 9px;border:1px solid var(--r-line);border-radius:5px;white-space:nowrap}
+#math2-analysis-two-parts .reader-layout{margin-top:18px;display:grid;gap:20px}
+#math2-analysis-two-parts[data-reader-layout=parallel] .reader-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+#math2-analysis-two-parts[data-reader-layout=parallel] .analysis-body{border-left:1px solid var(--r-line);padding-left:16px;border-top:0;padding-top:0}
+#math2-analysis-two-parts .question-stem{font-size:15px;line-height:1.95;overflow-wrap:anywhere}
+#math2-analysis-two-parts .question-options{display:grid;gap:8px;margin-top:14px}
+#math2-analysis-two-parts .question-option{display:grid;grid-template-columns:20px minmax(0,1fr);gap:3px;font-size:14px}
+#math2-analysis-two-parts .question-parts{padding-left:21px;margin:8px 0 0}
+#math2-analysis-two-parts .analysis-body{border-top:1px solid var(--r-line);padding-top:17px;min-width:0}
+#math2-analysis-two-parts .analysis-body dl{display:grid;gap:12px;margin:13px 0 0}
+#math2-analysis-two-parts .analysis-body dt{font-size:14px;color:var(--r-muted);margin-bottom:3px}
+#math2-analysis-two-parts .analysis-body dd{margin:0;font-size:14px;line-height:1.8}
+#math2-analysis-two-parts .analysis-decision{color:var(--r-brand)}
+#math2-analysis-two-parts .ratings{display:flex;gap:7px 14px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--r-line);padding-top:13px;margin-top:18px;font-size:14px}
+#math2-analysis-two-parts .rating-label{padding:3px 7px;border-radius:4px;background:var(--r-soft);color:var(--r-text)}
+#math2-analysis-two-parts .solution{margin-top:15px;padding-top:13px;border-top:1px solid var(--r-line);font-size:14px}
+#math2-analysis-two-parts .solution>div{margin-top:10px}
+#math2-analysis-two-parts .math-text{white-space:pre-wrap;overflow-wrap:anywhere;min-width:0}
+#math2-analysis-two-parts .formula{max-width:100%;white-space:normal}
+#math2-analysis-two-parts .katex{font-size:1.06em}
+#math2-analysis-two-parts .katex-display{margin:9px 0;max-width:100%}
+#math2-analysis-two-parts .katex-display>.katex{text-align:left}
+#math2-analysis-two-parts .math-fallback{font-family:Cambria,"Times New Roman",serif;white-space:pre-wrap;overflow-wrap:anywhere}
+#math2-analysis-two-parts .pending{color:var(--r-warning);font-size:14px}
+#math2-analysis-two-parts .topic-selection{margin-top:17px;font-size:14px;padding:13px 0;border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .topic-selection p{color:var(--r-muted);margin-top:5px}
+#math2-analysis-two-parts .year-presence{display:flex;gap:5px;align-items:center;flex-wrap:wrap;font-size:14px;margin-top:15px;color:var(--r-muted)}
+#math2-analysis-two-parts .year-presence .presence{padding:3px 5px;border-radius:3px;background:var(--r-brand-soft);color:var(--r-brand)}
+#math2-analysis-two-parts .paper-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:17px}
+#math2-analysis-two-parts .paper-meta{font-size:14px;color:var(--r-muted);margin-top:5px}
+#math2-analysis-two-parts .period-structure{border:1px solid var(--r-line);border-radius:8px;overflow:clip;background:var(--r-surface);margin-bottom:22px}
+#math2-analysis-two-parts table{border-collapse:collapse;width:100%;text-align:left;font-size:14px}
+#math2-analysis-two-parts th{font-weight:500;background:var(--r-soft);padding:11px 14px}
+#math2-analysis-two-parts td{padding:10px 14px;border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .structure-note{padding:10px 14px;font-size:14px;color:var(--r-muted);border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .paper-section{border-bottom:1px solid var(--r-line);margin-bottom:10px;padding-bottom:10px}
+#math2-analysis-two-parts .paper-section>summary{font-size:15px;font-weight:500;color:var(--r-text);padding:8px 0}
+#math2-analysis-two-parts .paper-section>summary small{font-size:14px;color:var(--r-muted);font-weight:400;margin-left:12px}
+#math2-analysis-two-parts .paper-row{display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 9px;width:100%;border-radius:5px}
+#math2-analysis-two-parts .paper-row:hover{background:var(--r-soft)}
+#math2-analysis-two-parts .paper-number{font-size:14px;color:var(--r-muted);font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .paper-row small{display:block;color:var(--r-muted);font-size:14px;margin-top:2px}
+#math2-analysis-two-parts .paper-row-meta{font-size:14px;color:var(--r-muted);white-space:nowrap}
+#math2-analysis-two-parts .comparison-intro{font-size:14px;color:var(--r-muted);margin:7px 0 20px}
+#math2-analysis-two-parts .comparison-picker{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+#math2-analysis-two-parts .comparison-picker label{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .comparison-picker select{display:block;width:100%;margin-top:5px}
+#math2-analysis-two-parts .comparison-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+#math2-analysis-two-parts .comparison-grid .question-reader{padding:17px}
+#math2-analysis-two-parts .comparison-grid .question-stem{font-size:14px}
+#math2-analysis-two-parts .comparison-grid .reader-layout{grid-template-columns:1fr}
+#math2-analysis-two-parts .comparison-grid .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}
+#math2-analysis-two-parts .comparison-conclusion{border-left:3px solid var(--r-brand);padding-left:15px;margin-bottom:22px}
+#math2-analysis-two-parts .comparison-conclusion p{font-size:14px;margin-top:6px}
+#math2-analysis-two-parts .empty-state{padding:22px 0;color:var(--r-muted)}
+#math2-analysis-two-parts .research-footer{display:flex;justify-content:flex-end;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--r-line);background:var(--r-surface);padding:13px 26px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .research-footer button{font-size:14px;color:var(--r-brand)}
+#math2-analysis-two-parts #standards-panel{padding:21px 26px;background:var(--r-surface);border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .standard-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+#math2-analysis-two-parts .standard-columns dl{display:grid;grid-template-columns:40px 1fr;gap:9px 10px;font-size:14px;margin:13px 0}
+#math2-analysis-two-parts .standard-columns dt{color:var(--r-brand)}
+#math2-analysis-two-parts .standard-columns dd{margin:0}
+#math2-analysis-two-parts .muted{color:var(--r-muted);font-size:14px}
+@media(max-width:780px){#math2-analysis-two-parts .topic-shell{grid-template-columns:1fr;gap:18px}#math2-analysis-two-parts .topic-navigation{border-right:0;padding-right:0;border-bottom:1px solid var(--r-line);padding-bottom:13px}#math2-analysis-two-parts .catalogue{padding-top:8px}#math2-analysis-two-parts[data-reader-layout=parallel] .reader-layout{grid-template-columns:1fr}#math2-analysis-two-parts[data-reader-layout=parallel] .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}}
+@media(max-width:580px){#math2-analysis-two-parts{font-size:14px}#math2-analysis-two-parts .research-header{padding-left:16px}#math2-analysis-two-parts .research-intro{padding:20px 16px 16px;align-items:start}#math2-analysis-two-parts h1{font-size:23px}#math2-analysis-two-parts h2{font-size:21px}#math2-analysis-two-parts .source-summary{font-size:14px;white-space:normal;min-width:80px}#math2-analysis-two-parts .research-toolbar{padding:0 16px 14px}#math2-analysis-two-parts .research-tabs button{padding:8px 10px;font-size:14px}#math2-analysis-two-parts #research-main{padding:18px 16px}#math2-analysis-two-parts .question-reader{padding:15px}#math2-analysis-two-parts .comparison-grid,#math2-analysis-two-parts .comparison-picker,#math2-analysis-two-parts .standard-columns{grid-template-columns:1fr}#math2-analysis-two-parts .paper-row{grid-template-columns:26px minmax(0,1fr);gap:8px}#math2-analysis-two-parts .paper-row-meta{grid-column:2}#math2-analysis-two-parts th,#math2-analysis-two-parts td{padding:8px 7px;font-size:14px}#math2-analysis-two-parts .research-footer{padding:12px 16px}#math2-analysis-two-parts #standards-panel{padding:18px 16px}#math2-analysis-two-parts .question-stem{font-size:14px}}
+@media(pointer:coarse){#math2-analysis-two-parts button,#math2-analysis-two-parts select{min-height:44px}#math2-analysis-two-parts select{font-size:16px}}
+@media(max-width:580px){#math2-analysis-two-parts .research-toolbar{padding:16px 16px 14px}}
+@media(max-width:400px){#math2-analysis-two-parts .research-brand span{display:block;margin-left:0}#math2-analysis-two-parts .research-intro{flex-direction:column;gap:8px}#math2-analysis-two-parts .source-summary{text-align:left}#math2-analysis-two-parts .source-summary br{display:none}#math2-analysis-two-parts .source-summary strong{margin-left:8px}}
+
+#math2-analysis-two-parts .study-tools{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-bottom:16px;margin-bottom:18px;border-bottom:1px solid var(--r-line)}
+#math2-analysis-two-parts .study-tools>span{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .difficulty-heading{display:flex;align-items:start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+#math2-analysis-two-parts .difficulty-heading p{font-size:14px;color:var(--r-muted);margin-top:5px}
+#math2-analysis-two-parts .year-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#math2-analysis-two-parts .year-controls button{padding:7px 10px;border:1px solid var(--r-line);background:var(--r-surface);border-radius:5px;font-size:14px}
+#math2-analysis-two-parts .annual-charts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:start}
+#math2-analysis-two-parts .annual-chart{margin:0;min-width:0}
+#math2-analysis-two-parts .annual-chart h3{font-size:16px}
+#math2-analysis-two-parts .annual-chart .chart-note{font-size:14px;color:var(--r-muted);margin-top:4px}
+#math2-analysis-two-parts .chart-legend{display:flex;gap:7px 15px;flex-wrap:wrap;margin:11px 0 15px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .chart-legend span{display:flex;align-items:center;gap:5px}
+#math2-analysis-two-parts .chart-swatch{width:11px;height:11px;display:inline-block;border-radius:2px}
+#math2-analysis-two-parts .band-d0{background:light-dark(#e0ede4,#3b5443);color:light-dark(#294b35,#f2f7f2)}
+#math2-analysis-two-parts .band-d1{background:light-dark(#92b9a0,#60866e);color:light-dark(#193b28,#f6faf6)}
+#math2-analysis-two-parts .band-d2{background:light-dark(#37694b,#a9ccb2);color:light-dark(#ffffff,#172c1e)}
+#math2-analysis-two-parts .band-c0{background:light-dark(#f0e7d2,#534b34);color:light-dark(#4d3b1d,#f6eedb)}
+#math2-analysis-two-parts .band-c1{background:light-dark(#d2b47a,#8b7648);color:light-dark(#3d2d0f,#ffffff)}
+#math2-analysis-two-parts .band-c2{background:light-dark(#966333,#d0a56d);color:light-dark(#ffffff,#241a0d)}
+#math2-analysis-two-parts .band-pending{background:var(--r-soft);color:var(--r-muted)}
+#math2-analysis-two-parts .chart-axis{margin-left:48px;display:flex;justify-content:space-between;font-size:14px;color:var(--r-muted);padding:0 0 5px}
+#math2-analysis-two-parts .annual-row{display:grid;grid-template-columns:40px minmax(0,1fr);align-items:center;gap:8px;width:100%;padding:6px 0;border-radius:5px;margin:0 0 2px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .annual-row:hover,#math2-analysis-two-parts .annual-row[aria-pressed=true]{background:var(--r-soft);color:var(--r-text)}
+#math2-analysis-two-parts .annual-row[aria-pressed=true] .annual-year{color:var(--r-brand);font-weight:500}
+#math2-analysis-two-parts .annual-year{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .annual-track{display:flex;height:27px;border-radius:3px;overflow:hidden;background:var(--r-soft)}
+#math2-analysis-two-parts .annual-segment{height:100%;display:flex;align-items:center;justify-content:center;font-size:14px;min-width:0}
+#math2-analysis-two-parts .annual-break{margin-top:10px;padding-top:11px;border-top:1px solid var(--r-line);border-radius:0}
+#math2-analysis-two-parts .annual-selection{margin:21px 0 25px;padding:13px 0;border-top:1px solid var(--r-line);border-bottom:1px solid var(--r-line);font-size:14px;line-height:1.8}
+#math2-analysis-two-parts .annual-selection strong{color:var(--r-brand)}
+#math2-analysis-two-parts .annual-selection p+p{margin-top:4px;color:var(--r-muted);font-size:14px}
+#math2-analysis-two-parts .question-map-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+#math2-analysis-two-parts .question-map-heading span{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .grade-1{background:light-dark(#edf5e9,#344431);color:var(--r-text)}
+#math2-analysis-two-parts .grade-2{background:light-dark(#c8dfc5,#516d54);color:light-dark(#223c27,#f2f7f2)}
+#math2-analysis-two-parts .grade-3{background:light-dark(#93b59c,#7a9d80);color:light-dark(#19331f,#122717)}
+#math2-analysis-two-parts .grade-4{background:light-dark(#538367,#b1ccb6);color:light-dark(#ffffff,#14261b)}
+#math2-analysis-two-parts .grade-5{background:light-dark(#214f37,#dae8d7);color:light-dark(#ffffff,#1b3223)}
+#math2-analysis-two-parts .question-map{display:grid;gap:13px;margin:13px 0 23px}
+#math2-analysis-two-parts .question-map-line{display:grid;grid-template-columns:90px minmax(0,1fr);gap:14px;align-items:center}
+#math2-analysis-two-parts .question-map-type{font-size:14px}
+#math2-analysis-two-parts .question-map-type small{display:block;color:var(--r-muted);font-size:14px}
+#math2-analysis-two-parts .question-map-cells{display:flex;gap:7px;flex-wrap:wrap}
+#math2-analysis-two-parts .question-map-cells button{width:42px;height:37px;border-radius:4px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .question-map-cells button[aria-pressed=true]{outline:2px solid var(--r-brand);outline-offset:2px}
+#math2-analysis-two-parts .reader-route{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding:13px 0 0;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .reader-route button{color:var(--r-brand);padding:6px 0}
+#math2-analysis-two-parts .reference-notes{margin-top:18px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .reference-notes p{margin-top:8px}
+#math2-analysis-two-parts .reference-notes a{color:var(--r-brand)}
+#math2-analysis-two-parts .chapter-distribution{margin:19px 0 23px;padding-bottom:18px;border-bottom:1px solid var(--r-line)}
+#math2-analysis-two-parts .chapter-distribution>h3{margin-bottom:4px}
+#math2-analysis-two-parts .chapter-distribution>p{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .chapter-facets{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;margin-top:14px}
+#math2-analysis-two-parts .chapter-facet{margin:0;min-width:0}
+#math2-analysis-two-parts .chapter-facet figcaption{font-size:14px;margin-bottom:6px}
+#math2-analysis-two-parts .chapter-axis{display:flex;justify-content:space-between;margin:0 80px 5px 138px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .chapter-bar{display:grid;grid-template-columns:130px minmax(0,1fr) 72px;gap:8px;align-items:center;padding:7px 0;width:100%;font-size:14px;border-radius:4px}
+#math2-analysis-two-parts .chapter-bar[aria-pressed=true],#math2-analysis-two-parts .chapter-bar:hover{background:var(--r-soft);color:var(--r-text)}
+#math2-analysis-two-parts .chapter-track{display:block;height:8px;border-radius:2px;background:var(--r-soft);overflow:hidden}
+#math2-analysis-two-parts .chapter-fill{display:block;height:100%;background:var(--r-brand)}
+#math2-analysis-two-parts .chapter-value{text-align:right;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .chapter-value small{display:block;color:var(--r-muted);font-size:14px}
+#math2-analysis-two-parts .paper-filter-summary{display:flex;gap:8px 16px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:14px;padding-bottom:12px;color:var(--r-brand)}
+#math2-analysis-two-parts .paper-filter-summary button{padding:5px 0;font-size:14px}
+#math2-analysis-two-parts .question-focus{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 7px}
+#math2-analysis-two-parts .question-focus button{border:1px solid var(--r-line);border-radius:5px;padding:6px 10px;font-size:14px;background:var(--r-surface)}
+#math2-analysis-two-parts .question-focus button[aria-pressed=true]{background:var(--r-selected);color:var(--r-selected-text);border-color:var(--r-selected)}
+#math2-analysis-two-parts .question-focus button:disabled{opacity:.6}
+#math2-analysis-two-parts .focus-count{font-size:14px;color:var(--r-muted);margin-bottom:12px}
+#math2-analysis-two-parts .outline-allocation{display:flex;gap:3px;height:74px;margin:18px 0 21px}
+#math2-analysis-two-parts .outline-allocation button{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:var(--r-brand-soft);color:var(--r-text);padding:8px 0;min-width:0;font-size:14px;border-radius:5px}
+#math2-analysis-two-parts .outline-allocation button small{font-size:14px}
+#math2-analysis-two-parts .outline-allocation button[aria-pressed=true]{background:var(--r-selected);color:var(--r-selected-text)}
+#math2-analysis-two-parts .outline-heading{display:flex;gap:10px 20px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+#math2-analysis-two-parts .outline-heading p{font-size:14px;color:var(--r-muted);margin-top:3px}
+#math2-analysis-two-parts .outline-heading>span{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .outline-profiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:25px;margin:14px 0 21px}
+#math2-analysis-two-parts .outline-profile h4{margin-bottom:8px}
+#math2-analysis-two-parts .outline-mix{display:flex;height:26px;border-radius:3px;overflow:hidden;background:var(--r-soft)}
+#math2-analysis-two-parts .outline-mix span{display:flex;align-items:center;justify-content:center;font-size:14px;min-width:0}
+#math2-analysis-two-parts .outline-profile .chart-legend{margin:9px 0 0}
+#math2-analysis-two-parts .outline-columns,#math2-analysis-two-parts .outline-row{display:grid;grid-template-columns:45px minmax(0,1fr) 112px 60px;gap:12px;align-items:center}
+#math2-analysis-two-parts .outline-columns{font-size:14px;color:var(--r-muted);padding:8px 10px;border-bottom:1px solid var(--r-line)}
+#math2-analysis-two-parts .outline-row{width:100%;padding:13px 10px;border-bottom:1px solid var(--r-line);font-size:14px;border-radius:4px}
+#math2-analysis-two-parts .outline-row:hover,#math2-analysis-two-parts .outline-row[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-text)}
+#math2-analysis-two-parts .outline-number{color:var(--r-muted);font-size:14px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .outline-task small{display:block;color:var(--r-muted);font-size:14px;margin-bottom:3px}
+#math2-analysis-two-parts .outline-rating{font-size:14px;color:var(--r-muted);line-height:1.9}
+#math2-analysis-two-parts .outline-marks{text-align:right;font-variant-numeric:tabular-nums;font-size:14px}
+#math2-analysis-two-parts .outline-reading{margin-top:21px}
+#math2-analysis-two-parts .paper-structure-title{margin:0 0 12px;font-size:16px;font-weight:500}
+#math2-analysis-two-parts .paper-split{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.5fr);gap:26px;align-items:start}
+#math2-analysis-two-parts .paper-browser{min-width:0;border-right:1px solid var(--r-line);padding-right:22px}
+#math2-analysis-two-parts .paper-browser .outline-allocation{height:70px;margin:0 0 16px}
+#math2-analysis-two-parts .paper-browser .outline-allocation button{gap:5px;font-size:14px}
+#math2-analysis-two-parts .paper-browser .outline-allocation button small{font-size:14px;white-space:nowrap}
+#math2-analysis-two-parts .paper-browser .chapter-distribution{border:0;padding:16px 0 0;margin:0;border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .paper-browser .chapter-distribution>h3{font-size:16px}
+#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:1fr;gap:18px;margin-top:15px}
+#math2-analysis-two-parts .paper-browser .chapter-bar{grid-template-columns:116px minmax(0,1fr) 43px;gap:6px;padding:5px 0;min-height:32px}
+#math2-analysis-two-parts .paper-browser .chapter-axis{margin-left:122px;margin-right:49px}
+#math2-analysis-two-parts .paper-browser .chapter-value small{display:none}
+#math2-analysis-two-parts .paper-browser .chapter-bar[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand)}
+#math2-analysis-two-parts .paper-browser .chapter-bar[aria-pressed=true] .chapter-fill{background:var(--r-selected)}
+#math2-analysis-two-parts .paper-detail .outline-heading{margin-bottom:12px}
+#math2-analysis-two-parts .paper-detail .outline-heading h3{font-size:16px}
+#math2-analysis-two-parts .paper-detail .outline-heading button{font-size:14px;color:var(--r-brand);padding:5px 0}
+#math2-analysis-two-parts .paper-questions{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 17px}
+#math2-analysis-two-parts .paper-choice{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid var(--r-line);border-radius:5px}
+#math2-analysis-two-parts .paper-choice[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-brand)}
+#math2-analysis-two-parts .paper-choice-number{font-size:16px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .paper-detail{min-width:0;align-self:start;position:sticky;top:16px}
+#math2-analysis-two-parts .paper-detail .reader-layout{grid-template-columns:1fr}
+#math2-analysis-two-parts .paper-detail .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}
+#math2-analysis-two-parts .difficulty-assessment{display:grid;gap:25px}
+#math2-analysis-two-parts .year-comparison{min-width:0}
+#math2-analysis-two-parts .comparison-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:16px}
+#math2-analysis-two-parts .comparison-title h3{font-size:16px}
+#math2-analysis-two-parts .comparison-title>span{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .assessment-column-legend{display:flex;justify-content:space-between;gap:10px 30px;flex-wrap:wrap;margin-bottom:18px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .assessment-legend-group{display:flex;gap:7px 13px;flex-wrap:wrap;align-items:center}
+#math2-analysis-two-parts .assessment-legend-group>span{display:flex;gap:4px;align-items:center}
+#math2-analysis-two-parts .assessment-column-panel{display:grid;grid-template-columns:32px minmax(0,1fr);gap:8px;margin:0 0 18px}
+#math2-analysis-two-parts .assessment-column-axis{height:190px;position:relative;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .assessment-column-axis>span{position:absolute;right:0;transform:translateY(50%)}
+#math2-analysis-two-parts .assessment-column-area{min-width:0;position:relative}
+#math2-analysis-two-parts .assessment-column-grid{position:absolute;top:0;left:0;right:0;height:190px;pointer-events:none}
+#math2-analysis-two-parts .assessment-column-grid>span{position:absolute;left:0;right:0;border-top:1px solid var(--r-line)}
+#math2-analysis-two-parts .assessment-column-years{position:relative;display:grid;gap:4px}
+#math2-analysis-two-parts .assessment-column-year{display:flex;flex-direction:column;align-items:center;gap:7px;padding:0;min-width:0;border-radius:4px;font-size:14px}
+#math2-analysis-two-parts .assessment-column-year:hover,#math2-analysis-two-parts .assessment-column-year[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-text)}
+#math2-analysis-two-parts .assessment-column-year[aria-pressed=true] .assessment-year-label{color:var(--r-brand);font-weight:500}
+#math2-analysis-two-parts .assessment-column-pair{display:flex;justify-content:center;gap:5px;width:100%;height:190px}
+#math2-analysis-two-parts .assessment-column-stack{display:flex;flex-direction:column-reverse;width:min(24px,40%);height:100%;min-width:0;overflow:hidden;border-radius:2px}
+#math2-analysis-two-parts .assessment-column-stack>span{display:block;width:100%;flex-shrink:0}
+#math2-analysis-two-parts .assessment-year-label{min-height:24px;font-size:14px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .difficulty-detail{min-width:0;border-top:1px solid var(--r-line);padding-top:22px}
+#math2-analysis-two-parts .difficulty-year-heading{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+#math2-analysis-two-parts .difficulty-year-heading h3{font-size:20px;font-weight:500}
+#math2-analysis-two-parts .difficulty-year-heading p{font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .year-composition{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;font-size:14px;color:var(--r-muted);padding:10px 0 14px;border-bottom:1px solid var(--r-line);margin-bottom:14px}
+#math2-analysis-two-parts .difficulty-detail .question-focus{gap:6px;margin:0 0 18px}
+#math2-analysis-two-parts .difficulty-detail .question-focus button{padding:6px 8px}
+#math2-analysis-two-parts .difficulty-detail .chart-legend{gap:7px 12px;margin:10px 0 14px}
+#math2-analysis-two-parts .difficulty-detail .question-map-line{grid-template-columns:60px minmax(0,1fr);gap:10px}
+#math2-analysis-two-parts .difficulty-detail .question-map{gap:9px;margin:12px 0 20px}
+#math2-analysis-two-parts .difficulty-detail .question-map-cells{gap:5px}
+#math2-analysis-two-parts .difficulty-detail .question-map-cells button{width:38px;height:36px}
+#math2-analysis-two-parts .difficulty-detail .reader-layout{grid-template-columns:1fr}
+#math2-analysis-two-parts .difficulty-detail .analysis-body{border-left:0;padding-left:0;border-top:1px solid var(--r-line);padding-top:17px}
+#math2-analysis-two-parts .question-rating-selection{display:flex;gap:8px 18px;justify-content:space-between;align-items:baseline;flex-wrap:wrap;font-size:14px;margin:4px 0 12px}
+#math2-analysis-two-parts .question-rating-selection>span{color:var(--r-muted)}
+#math2-analysis-two-parts .rating-source{margin-top:13px}
+#math2-analysis-two-parts .rating-source>summary{font-size:15px;color:var(--r-brand);padding:7px 0}
+#math2-analysis-two-parts .rating-source[open]>summary{margin-bottom:12px}
+@media(max-width:760px){#math2-analysis-two-parts .difficulty-detail .question-map-line{grid-template-columns:1fr;gap:6px}#math2-analysis-two-parts .year-composition{grid-template-columns:1fr;gap:5px}}
+@media(pointer:coarse){#math2-analysis-two-parts .difficulty-detail .question-map-cells button{width:44px;height:44px}}
+@media(max-width:760px){#math2-analysis-two-parts .paper-split{grid-template-columns:1fr;gap:22px}#math2-analysis-two-parts .paper-browser{border-right:0;padding-right:0}#math2-analysis-two-parts .paper-detail{position:static}#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){#math2-analysis-two-parts .paper-browser .outline-allocation{flex-direction:row;height:70px}#math2-analysis-two-parts .paper-browser .outline-allocation button{flex-direction:column;gap:3px;padding:0}#math2-analysis-two-parts .paper-browser .chapter-facets{grid-template-columns:1fr;gap:16px}#math2-analysis-two-parts .paper-browser .chapter-bar{grid-template-columns:116px minmax(0,1fr) 43px}#math2-analysis-two-parts .paper-browser .chapter-track{grid-column:auto;grid-row:auto}}
+#math2-analysis-two-parts .outline-note{margin-top:16px;font-size:14px;color:var(--r-muted)}
+#math2-analysis-two-parts .study-tabs{display:flex;gap:24px;border-bottom:1px solid var(--r-line);margin-bottom:24px}
+#math2-analysis-two-parts .study-tabs button{font-size:16px;padding:10px 5px;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--r-muted);white-space:nowrap}
+#math2-analysis-two-parts .study-tabs button[aria-pressed=true]{color:var(--r-brand);border-bottom-color:var(--r-brand);font-weight:500}
+#math2-analysis-two-parts .paper-meta,#math2-analysis-two-parts .outline-heading p{color:var(--r-text)}
+@media(max-width:580px){#math2-analysis-two-parts .study-tabs{gap:0}#math2-analysis-two-parts .study-tabs button{flex:1;min-width:0;text-align:center;font-size:15px;padding:10px 2px}}
+@media(max-width:580px){#math2-analysis-two-parts .outline-allocation{flex-direction:column;height:282px}#math2-analysis-two-parts .outline-allocation button{flex-direction:row;gap:12px;padding:0;min-height:0}#math2-analysis-two-parts .outline-profiles{grid-template-columns:1fr;gap:16px}#math2-analysis-two-parts .outline-columns{display:none}#math2-analysis-two-parts .outline-row{grid-template-columns:32px minmax(0,1fr);gap:5px 9px;padding:12px 5px}#math2-analysis-two-parts .outline-rating{grid-column:2}#math2-analysis-two-parts .outline-marks{grid-column:2;text-align:left}}
+@media(max-width:860px){#math2-analysis-two-parts .chapter-facets{grid-template-columns:1fr;gap:19px}}
+@media(max-width:580px){#math2-analysis-two-parts .chapter-bar{grid-template-columns:minmax(0,1fr) 72px;gap:4px 8px;padding:8px 0;font-size:14px}#math2-analysis-two-parts .chapter-track{grid-column:1/-1;grid-row:2}#math2-analysis-two-parts .chapter-axis{margin:0 0 5px}}
+@media(max-width:860px){#math2-analysis-two-parts .annual-charts{grid-template-columns:1fr;gap:28px}}
+@media(max-width:580px){#math2-analysis-two-parts .question-map-line{grid-template-columns:1fr;gap:6px}#math2-analysis-two-parts .question-map-type small{display:inline;margin-left:8px}#math2-analysis-two-parts .difficulty-heading{margin-bottom:18px}#math2-analysis-two-parts .annual-row{margin-left:0;margin-right:0;padding:6px 0;grid-template-columns:36px minmax(0,1fr);gap:7px}#math2-analysis-two-parts .chart-axis{margin-left:43px;padding-left:0;padding-right:0}#math2-analysis-two-parts .research-tabs button{font-size:14px;padding:8px 10px}}
+@media(pointer:coarse){#math2-analysis-two-parts .paper-browser .chapter-bar{min-height:44px}#math2-analysis-two-parts .question-map-cells button{width:44px;height:44px}#math2-analysis-two-parts .annual-row{min-height:44px}}
+
+.analysis-shell .analysis-external-title{display:none}.analysis-shell .workspace{max-width:1500px;padding:20px 24px 35px}.analysis-shell>main{background:#f5f7f4}.analysis-live-host{min-width:0}#math2-analysis-two-parts{width:100%;margin:0;min-width:0}#math2-analysis-two-parts .research-toolbar{padding:0 0 16px}#math2-analysis-two-parts .research-toolbar h2{font-size:23px}#math2-analysis-two-parts #research-main{padding:22px 0}#math2-analysis-two-parts .research-footer{padding:14px 0}#math2-analysis-two-parts .source-question-images{display:grid;gap:12px}#math2-analysis-two-parts .source-question-images img{width:100%;height:auto;display:block}#math2-analysis-two-parts .software-reader-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}#math2-analysis-two-parts .software-reader-actions button{padding:7px 10px;border:1px solid var(--r-line);border-radius:5px;background:var(--r-surface);color:var(--r-brand)}#math2-analysis-two-parts .software-reader-actions button:disabled{color:var(--r-muted)}#math2-analysis-two-parts .math-error{color:var(--r-warning);white-space:pre-wrap;overflow-wrap:anywhere}.analysis-live-error{color:var(--danger)}
+@media(max-width:580px){.analysis-shell .workspace{padding:16px 12px 25px}#math2-analysis-two-parts #research-main{padding:18px 0}}
+
+#math2-analysis-two-parts{border:0;border-radius:0;overflow:visible;background:transparent}#math2-analysis-two-parts [hidden]{display:none!important}
+
+#math2-analysis-two-parts .scope-label{white-space:nowrap}#math2-analysis-two-parts .scope-label select{width:auto;min-width:0}
