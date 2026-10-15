@@ -197,6 +197,29 @@
 #math2-analysis-two-parts .question-focus button[aria-pressed=true]{background:var(--r-selected);color:var(--r-selected-text);border-color:var(--r-selected)}
 #math2-analysis-two-parts .question-focus button:disabled{opacity:.6}
 #math2-analysis-two-parts .focus-count{font-size:12px;color:var(--r-muted);margin-bottom:12px}
+#math2-analysis-two-parts .outline-allocation{display:flex;gap:3px;height:74px;margin:18px 0 21px}
+#math2-analysis-two-parts .outline-allocation button{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:var(--r-brand-soft);color:var(--r-text);padding:8px 0;min-width:0;font-size:14px;border-radius:5px}
+#math2-analysis-two-parts .outline-allocation button small{font-size:12px}
+#math2-analysis-two-parts .outline-allocation button[aria-pressed=true]{background:var(--r-selected);color:var(--r-selected-text)}
+#math2-analysis-two-parts .outline-heading{display:flex;gap:10px 20px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+#math2-analysis-two-parts .outline-heading p{font-size:12px;color:var(--r-muted);margin-top:3px}
+#math2-analysis-two-parts .outline-heading>span{font-size:12px;color:var(--r-muted)}
+#math2-analysis-two-parts .outline-profiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:25px;margin:14px 0 21px}
+#math2-analysis-two-parts .outline-profile h4{margin-bottom:8px}
+#math2-analysis-two-parts .outline-mix{display:flex;height:26px;border-radius:3px;overflow:hidden;background:var(--r-soft)}
+#math2-analysis-two-parts .outline-mix span{display:flex;align-items:center;justify-content:center;font-size:12px;min-width:0}
+#math2-analysis-two-parts .outline-profile .chart-legend{margin:9px 0 0}
+#math2-analysis-two-parts .outline-columns,#math2-analysis-two-parts .outline-row{display:grid;grid-template-columns:45px minmax(0,1fr) 112px 48px;gap:12px;align-items:center}
+#math2-analysis-two-parts .outline-columns{font-size:12px;color:var(--r-muted);padding:8px 10px;border-bottom:1px solid var(--r-line)}
+#math2-analysis-two-parts .outline-row{width:100%;padding:13px 10px;border-bottom:1px solid var(--r-line);font-size:14px;border-radius:4px}
+#math2-analysis-two-parts .outline-row:hover,#math2-analysis-two-parts .outline-row[aria-pressed=true]{background:var(--r-brand-soft);color:var(--r-text)}
+#math2-analysis-two-parts .outline-number{color:var(--r-muted);font-size:13px;font-variant-numeric:tabular-nums}
+#math2-analysis-two-parts .outline-task small{display:block;color:var(--r-muted);font-size:12px;margin-bottom:3px}
+#math2-analysis-two-parts .outline-rating{font-size:12px;color:var(--r-muted);line-height:1.9}
+#math2-analysis-two-parts .outline-marks{text-align:right;font-variant-numeric:tabular-nums;font-size:13px}
+#math2-analysis-two-parts .outline-reading{margin-top:21px}
+#math2-analysis-two-parts .outline-note{margin-top:16px;font-size:12px;color:var(--r-muted)}
+@media(max-width:580px){#math2-analysis-two-parts .outline-allocation{flex-direction:column;height:282px}#math2-analysis-two-parts .outline-allocation button{flex-direction:row;gap:12px;padding:0;min-height:0}#math2-analysis-two-parts .outline-profiles{grid-template-columns:1fr;gap:16px}#math2-analysis-two-parts .outline-columns{display:none}#math2-analysis-two-parts .outline-row{grid-template-columns:32px minmax(0,1fr);gap:5px 9px;padding:12px 5px}#math2-analysis-two-parts .outline-rating{grid-column:2}#math2-analysis-two-parts .outline-marks{grid-column:2;text-align:left}}
 @media(max-width:860px){#math2-analysis-two-parts .chapter-facets{grid-template-columns:1fr;gap:19px}}
 @media(max-width:580px){#math2-analysis-two-parts .chapter-bar{grid-template-columns:minmax(0,1fr) 72px;gap:4px 8px;padding:8px 0;font-size:13px}#math2-analysis-two-parts .chapter-track{grid-column:1/-1;grid-row:2}#math2-analysis-two-parts .chapter-axis{margin:0 0 5px}}
 @media(max-width:860px){#math2-analysis-two-parts .annual-charts{grid-template-columns:1fr;gap:28px}}
@@ -222,7 +245,7 @@
   const topicNames={'导数定义与极限反推导数':'导数与差商','极值与拐点判定':'极值与拐点','凸性与等价命题':'凸性与证明','泰勒抵消与系数匹配':'泰勒与系数抵消'};
   const chapterOrder=['函数、极限与连续','一元函数微分学','一元函数积分学','多元函数微分学','二重积分','定积分应用','常微分方程','行列式','矩阵','向量与矩阵秩','线性方程组','特征值与相似','二次型'];
   const types=['选择题','填空题','解答题'];
-  const state={view:'study',studyMode:'year',period:'all',topic:'导数定义与极限反推导数',question:'EXAM-M2-2025-18',year:2026,difficultyQuestion:'EXAM-M2-2026-22',yearChapter:'',questionFocus:'all',readerLayout:'stacked'};
+  const state={view:'study',studyMode:'outline',period:'all',topic:'导数定义与极限反推导数',question:'EXAM-M2-2025-18',year:2026,difficultyQuestion:'EXAM-M2-2026-22',yearChapter:'',questionFocus:'all',outlineType:'解答题',outlineQuestion:'',readerLayout:'stacked'};
   const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const num=value=>Number.isInteger(Number(value))?String(Number(value)):Number(value).toFixed(1);
   const points=rows=>rows.reduce((n,q)=>n+Number(q.original_points||0),0);
@@ -247,18 +270,19 @@
     requestAnimationFrame(fitFormulae);
   }
   function fitFormulae(){for(const el of root.querySelectorAll('.formula')){el.style.fontSize='';const available=el.parentElement?.getBoundingClientRect().width||0,width=el.getBoundingClientRect().width;if(available>0&&width>available)el.style.fontSize=`${Math.max(.8,Math.min(1,available/width))}em`;}}
-  function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{page:'命题分析两部分设计',view:state.view,studyMode:state.studyMode,period:state.period,topic:state.topic,question:state.view==='difficulty'?state.difficultyQuestion:state.question,year:state.year,chapter:state.yearChapter,questionFocus:state.questionFocus},privateContent:{studyQuestion:state.question,readerLayout:state.readerLayout}}).catch(()=>{});}
+  function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{page:'命题分析骨架设计',view:state.view,studyMode:state.studyMode,period:state.period,topic:state.topic,question:state.view==='difficulty'?state.difficultyQuestion:state.studyMode==='outline'?state.outlineQuestion:state.question,year:state.year,chapter:state.yearChapter,questionFocus:state.questionFocus,outlineType:state.outlineType},privateContent:{studyQuestion:state.question,readerLayout:state.readerLayout}}).catch(()=>{});}
   function restore(snapshot){
-    const m=snapshot?.modelContent,p=snapshot?.privateContent;if(m?.page!=='命题分析两部分设计')return;
+    const m=snapshot?.modelContent,p=snapshot?.privateContent;if(m?.page!=='命题分析骨架设计')return;
     if(['study','difficulty'].includes(m.view))state.view=m.view;
-    if(['topic','year'].includes(m.studyMode))state.studyMode=m.studyMode;
+    if(['topic','year','outline'].includes(m.studyMode))state.studyMode=m.studyMode;
     if(['all','current','old'].includes(m.period))state.period=m.period;
     if(DATA.rows.some(q=>q.model===m.topic))state.topic=m.topic;
-    if(rowById(m.question)){if(state.view==='difficulty')state.difficultyQuestion=m.question;else state.question=m.question;}
+    if(rowById(m.question)){if(state.view==='difficulty')state.difficultyQuestion=m.question;else if(state.studyMode==='outline')state.outlineQuestion=m.question;else state.question=m.question;}
     if(rowById(p?.studyQuestion))state.question=p.studyQuestion;
     if(Number.isInteger(m.year)&&m.year>=2014&&m.year<=2026)state.year=m.year;
     if(typeof m.chapter==='string'&&(!m.chapter||DATA.rows.some(q=>q.chapter===m.chapter)))state.yearChapter=m.chapter;
     if(['all','hard','heavy'].includes(m.questionFocus))state.questionFocus=m.questionFocus;
+    if(types.includes(m.outlineType))state.outlineType=m.outlineType;
     if(['stacked','parallel'].includes(p?.readerLayout))state.readerLayout=p.readerLayout;
   }
   function questionBody(q){
@@ -296,7 +320,18 @@
     const shown=state.yearChapter?rows.filter(q=>q.chapter===state.yearChapter):rows;
     return `<section><header class="paper-heading"><div><h2>${state.year}年数学二真题</h2><p class="paper-meta">${rows.length}道题 · ${num(points(rows))}分 · 高数${num(points(rows.filter(q=>q.subject==='高等数学')))}分 / 线代${num(points(rows.filter(q=>q.subject==='线性代数')))}分</p></div>${yearPicker()}</header>${chapterDistribution(rows)}${state.yearChapter?`<div class="paper-filter-summary"><span>${esc(state.yearChapter)} · ${shown.length}题 · ${points(shown)}分</span><button type="button" class="cursor-interaction" data-clear-chapter="true">返回整卷题目</button></div>`:''}${types.map(type=>{const items=shown.filter(q=>q.type===type);if(!items.length)return '';return `<details class="paper-section" ${type==='解答题'||state.yearChapter?'open':''}><summary>${type}<small>${items.length}题 · ${num(points(items))}分</small></summary>${items.map(q=>`<button type="button" class="paper-row cursor-interaction" data-open-question="${esc(q.id)}"><span class="paper-number">${num(q.original_number).padStart(2,'0')}</span><span>${esc(q.model)}<small>${math(q.core||q.point)}</small></span><span class="paper-row-meta">${num(q.original_points)}分 · 预估${q.difficulty==null?'未评级':num(q.difficulty)+'级'}　→</span></button>`).join('')}</details>`;}).join('')}<p class="muted">2014—2020为23题，2021起为22题；跨时期先按题型比较。</p></section>`;
   }
-  function renderStudy(){return `<div class="study-tools"><label class="scope-label">查看方式<select id="study-mode" aria-label="试卷分析查看方式"><option value="topic" ${state.studyMode==='topic'?'selected':''}>按考法查看</option><option value="year" ${state.studyMode==='year'?'selected':''}>按年份查看</option></select></label><span>完整题目 · 解题与命题分析</span></div>${state.studyMode==='year'?renderPaper():renderTopic()}`;}
+  function outlineProfile(rows,key){
+    const ps=parts(rows,key),total=points(rows),description=ps.map(b=>`${b.short}${b.points}分、${b.count}题`).join('；');
+    return `<section class="outline-profile"><h4>${key==='difficulty'?'预估难度':'计算量'} · ${total}分</h4><div class="outline-mix" role="img" aria-label="${esc(description)}">${ps.filter(b=>b.points>0).map(b=>`<span class="${b.cls}" style="width:${b.points/total*100}%" aria-hidden="true">${b.points/total>=.16?num(b.points):''}</span>`).join('')}</div><div class="chart-legend">${ps.map(b=>`<span><i class="chart-swatch ${b.cls}" aria-hidden="true"></i>${b.short} ${b.points}分</span>`).join('')}</div></section>`;
+  }
+  function renderOutline(){
+    ensureYear();const rows=scoped().filter(q=>q.year===state.year).sort((a,b)=>a.original_number-b.original_number);
+    const items=rows.filter(q=>q.type===state.outlineType),total=points(rows),selected=items.find(q=>q.id===state.outlineQuestion);
+    if(!selected)state.outlineQuestion='';
+    const allocation=types.map(type=>{const rs=rows.filter(q=>q.type===type);return `<button type="button" class="cursor-interaction" data-outline-type="${type}" style="flex:${points(rs)}" aria-pressed="${state.outlineType===type}" aria-label="${type}，${rs.length}题，${points(rs)}分，查看题位安排"><span>${type}</span><small>${rs.length}题 · ${points(rs)}分</small></button>`;}).join('');
+    return `<section><header class="paper-heading"><div><h2>${state.year}年 · 试卷骨架</h2><p class="paper-meta">真题结构参照 · ${rows.length}题 · ${total}分 · 高数${points(rows.filter(q=>q.subject==='高等数学'))}分 / 线代${points(rows.filter(q=>q.subject==='线性代数'))}分</p></div>${yearPicker()}</header><div class="outline-allocation" aria-label="整卷题型分值配比">${allocation}</div><div class="outline-heading"><div><h3>${state.outlineType} · 第${items[0].original_number}—${items[items.length-1].original_number}题</h3><p>${items.length}题 · ${points(items)}分 · 高数${points(items.filter(q=>q.subject==='高等数学'))}分 / 线代${points(items.filter(q=>q.subject==='线性代数'))}分</p></div><span>点击题位查看原题</span></div><div class="outline-profiles">${outlineProfile(items,'difficulty')}${outlineProfile(items,'calculation')}</div><div class="outline-columns" aria-hidden="true"><span>题位</span><span>主章节与考查任务</span><span>预估评级</span><span>分值</span></div><div aria-label="${state.outlineType}题位安排">${items.map(q=>`<button type="button" class="outline-row cursor-interaction" data-outline-question="${esc(q.id)}" aria-pressed="${state.outlineQuestion===q.id}"><span class="outline-number">${num(q.original_number).padStart(2,'0')}</span><span class="outline-task"><small>${esc(q.subject)} ／ ${esc(q.chapter)}</small>${math(insight(q)?.objective||q.core||q.model)}</span><span class="outline-rating">难度 ${difficulty(q)}<br>计算量 ${cost(q)}</span><span class="outline-marks">${q.original_points}分</span></button>`).join('')}</div>${selected?`<div class="outline-reading">${questionReader(selected)}<div class="reader-route"><span>${esc(selected.model)}</span><button type="button" class="cursor-interaction" data-open-question="${esc(selected.id)}">查看同类考法 →</button></div></div>`:''}<p class="outline-note">考查任务来自已有分析；分值与评级沿用真题记录。此骨架用于研究原卷结构。</p></section>`;
+  }
+  function renderStudy(){return `<div class="study-tools"><label class="scope-label">查看方式<select id="study-mode" aria-label="试卷分析查看方式"><option value="outline" ${state.studyMode==='outline'?'selected':''}>试卷骨架</option><option value="topic" ${state.studyMode==='topic'?'selected':''}>按考法查看</option><option value="year" ${state.studyMode==='year'?'selected':''}>按年份查看</option></select></label><span>完整题目 · 解题与命题分析</span></div>${state.studyMode==='outline'?renderOutline():state.studyMode==='year'?renderPaper():renderTopic()}`;}
   const bands={difficulty:[{name:'1–2级 · 基础与较易',short:'1–2级',levels:[1,2],cls:'band-d0'},{name:'3级 · 中等',short:'3级',levels:[3],cls:'band-d1'},{name:'4–5级 · 较难与很难',short:'4–5级',levels:[4,5],cls:'band-d2'}],calculation:[{name:'低计算量',short:'低',levels:[1],cls:'band-c0'},{name:'中计算量',short:'中',levels:[2],cls:'band-c1'},{name:'高计算量',short:'高',levels:[3],cls:'band-c2'}]};
   function parts(rows,key){return bands[key].map(b=>({...b,points:points(rows.filter(q=>b.levels.includes(q[key]))),count:rows.filter(q=>b.levels.includes(q[key])).length}));}
   function chart(key,years){
@@ -327,14 +362,16 @@
     if(button.dataset.chapter){state.yearChapter=state.yearChapter===button.dataset.chapter?'':button.dataset.chapter;render();save();return;}
     if(button.dataset.clearChapter){state.yearChapter='';render();save();return;}
     if(button.dataset.questionFocus){state.questionFocus=button.dataset.questionFocus;render();save();return;}
+    if(button.dataset.outlineType){state.outlineType=button.dataset.outlineType;state.outlineQuestion='';render();save();return;}
+    if(button.dataset.outlineQuestion){state.outlineQuestion=button.dataset.outlineQuestion;render();save();return;}
     if(button.dataset.openQuestion){const q=rowById(button.dataset.openQuestion);state.topic=q.model;state.question=q.id;state.view='study';state.studyMode='topic';render();save();return;}
-    if(button.dataset.year){state.year=Number(button.dataset.year);state.difficultyQuestion='';state.yearChapter='';render();save();return;}
+    if(button.dataset.year){state.year=Number(button.dataset.year);state.difficultyQuestion='';state.yearChapter='';state.outlineQuestion='';render();save();return;}
     if(button.dataset.difficultyQuestion){state.difficultyQuestion=button.dataset.difficultyQuestion;render();save();return;}
     if(button.id==='research-standards'){const panel=root.querySelector('#standards-panel');panel.hidden=!panel.hidden;button.setAttribute('aria-expanded',String(!panel.hidden));}
   });
   root.addEventListener('change',event=>{
-    if(event.target.id==='research-period'){state.period=event.target.value;state.yearChapter='';render();save();}
-    if(event.target.id==='paper-year'){state.year=Number(event.target.value);state.difficultyQuestion='';state.yearChapter='';render();save();}
+    if(event.target.id==='research-period'){state.period=event.target.value;state.yearChapter='';state.outlineQuestion='';render();save();}
+    if(event.target.id==='paper-year'){state.year=Number(event.target.value);state.difficultyQuestion='';state.yearChapter='';state.outlineQuestion='';render();save();}
     if(event.target.id==='study-mode'){state.studyMode=event.target.value;render();save();}
   });
   restore(window.openai?.widgetState);render();
